@@ -210,10 +210,10 @@
           Solusi tanda tangan elektronik tersertifikasi untuk Pemerintah Kota Balikpapan. Percepat birokrasi dengan keamanan standar nasional.
         </p>
         <div class="anim-fade-up delay-3 flex flex-wrap justify-center gap-6">
-          <a href="http://edocumentweb.test/verification"><button class="hero-btn-primary px-10 py-5 bg-secondary text-white rounded-xl font-bold flex items-center gap-3">
+          <button class="hero-btn-primary px-10 py-5 bg-secondary text-white rounded-xl font-bold flex items-center gap-3">
             <span class="material-symbols-outlined">edit_document</span>
             Mulai Verifikasi
-          </button></a>
+          </button>
           <button class="hero-btn-ghost px-10 py-5 bg-white/10 text-white border border-white/20 rounded-xl font-bold backdrop-blur-sm">
             Cek Panduan
           </button>
