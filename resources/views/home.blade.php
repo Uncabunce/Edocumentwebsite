@@ -253,7 +253,7 @@
       </div>
     </div>
     <div class="max-w-7xl mx-auto px-8 py-6 border-t border-slate-100 flex justify-between items-center text-slate-500 text-xs">
-      <p>© 2024 Pemerintah Kota Balikpapan. Hak Cipta Dilindungi Undang-Undang.</p>
+      <p>© 2026 Pemerintah Kota Balikpapan. Hak Cipta Dilindungi Undang-Undang.</p>
       <p>Versi 2.4.0</p>
     </div>
   </footer>
