@@ -222,6 +222,62 @@
     </div>
   </section>
 
+  <section class="py-24 bg-surface-container-lowest">
+<div class="max-w-3xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-extrabold text-primary tracking-tight mb-4">Pertanyaan yang Sering Diajukan</h2>
+<p class="text-on-surface-variant text-lg">Temukan jawaban untuk hal-hal yang sering ditanyakan mengenai layanan kami.</p>
+</div>
+<div class="space-y-4">
+<details class="group bg-surface rounded-2xl border border-outline-variant/30 overflow-hidden" open="">
+<summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+<h3 class="text-lg font-bold text-primary">Apa itu ESign Balikpapan?</h3>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+ESign Balikpapan adalah platform resmi layanan tanda tangan elektronik (digital signature) milik Pemerintah Kota Balikpapan yang memungkinkan aparatur dan masyarakat untuk menandatangani dokumen secara digital dengan keabsahan hukum yang setara dengan tanda tangan basah.
+</div>
+</details>
+<details class="group bg-surface rounded-2xl border border-outline-variant/30 overflow-hidden">
+<summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+<h3 class="text-lg font-bold text-primary">Apakah tanda tangan ini sah secara hukum?</h3>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+Ya, sangat sah. Layanan kami telah sesuai dengan UU No. 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik (ITE) serta PP No. 71 Tahun 2019. Sertifikat elektronik yang diterbitkan memiliki kekuatan hukum yang kuat dan dapat dibuktikan integritasnya.
+</div>
+</details>
+<details class="group bg-surface rounded-2xl border border-outline-variant/30 overflow-hidden">
+<summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+<h3 class="text-lg font-bold text-primary">Bagaimana cara memverifikasi dokumen?</h3>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+Anda dapat menggunakan fitur "Verifikasi Dokumen" di portal ini dengan mengunggah file PDF yang telah ditandatangani. Sistem akan memeriksa validitas sertifikat elektronik dan memastikan bahwa isi dokumen tidak mengalami perubahan sejak ditandatangani.
+</div>
+</details>
+<details class="group bg-surface rounded-2xl border border-outline-variant/30 overflow-hidden">
+<summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+<h3 class="text-lg font-bold text-primary">Apakah layanan ini gratis?</h3>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+Layanan ESign Balikpapan disediakan secara gratis bagi aparatur sipil negara di lingkungan Pemerintah Kota Balikpapan dan masyarakat untuk kebutuhan administrasi publik tertentu sesuai dengan kebijakan pemerintah kota guna mendukung percepatan transformasi digital.
+</div>
+</details>
+<details class="group bg-surface rounded-2xl border border-outline-variant/30 overflow-hidden">
+<summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+<h3 class="text-lg font-bold text-primary">Apa yang dibutuhkan untuk mendaftar?</h3>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+Untuk warga, Anda membutuhkan KTP elektronik yang valid dan nomor ponsel aktif. Untuk ASN, pendaftaran dilakukan melalui verifikasi data kepegawaian resmi yang terintegrasi dengan sistem kepegawaian kota.
+</div>
+</details>
+</div>
+</div>
+</section>
+
   <!-- Footer -->
   <footer class="reveal bg-slate-50 border-t border-slate-200 w-full mt-auto">
     <div class="max-w-7xl mx-auto px-8 py-12 flex flex-col md:flex-row justify-between gap-8">
