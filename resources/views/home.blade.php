@@ -181,17 +181,26 @@
 
 <!-- TopNavBar -->
 <nav id="navbar" class="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-xl shadow-sm">
-  <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex justify-between items-center">
+    
     <div class="anim-fade-in delay-1 text-lg font-bold text-blue-900 uppercase tracking-wider font-headline">
       <div class="flex items-center gap-2">
-        <img src="images\bpn_logo.png" alt="Logo Komdigi" class="h-12 w-auto object-contain">
-        <span class="text-xl font-extrabold tracking-tight capitalize">ESign Balikpapan</span>
+        <img src="images\bpn_logo.png" alt="Logo Komdigi" class="h-10 sm:h-12 w-auto object-contain">
+        <span class="text-lg sm:text-xl font-extrabold tracking-tight capitalize">ESign Balikpapan</span>
       </div>
     </div>
-    <div class="anim-fade-in delay-2 flex items-center gap-4">
-      <a href="#faq-section"><button class="hidden sm:block text-on-primary-fixed-variant font-medium px-4 py-2 hover:text-secondary hover:underline">FAQ</button></a>
-      <button class="nav-login-btn bg-primary hover:bg-primary-container text-white px-6 py-2.5 rounded-xl font-semibold shadow-md">Login</button>
+
+    <div class="anim-fade-in delay-2 flex items-center gap-2 sm:gap-4">
+      <a href="#faq-section">
+        <button class="text-on-primary-fixed-variant text-sm sm:text-base font-medium px-2 sm:px-4 py-2 hover:text-secondary hover:underline">
+          FAQ
+        </button>
+      </a>
+      <button class="nav-login-btn bg-primary hover:bg-primary-container text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl text-sm sm:text-base font-semibold shadow-md">
+        Login
+      </button>
     </div>
+
   </div>
 </nav>
 
@@ -230,7 +239,7 @@
 <p class="text-on-surface-variant text-lg">Temukan jawaban untuk hal-hal yang sering ditanyakan mengenai layanan kami.</p>
 </div>
 <div class="space-y-4">
-<details class="group bg-surface rounded-2xl border border-outline-variant/30 overflow-hidden" open="">
+<details class="group bg-surface rounded-2xl border border-outline-variant/30 overflow-hidden">
 <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
 <h3 class="text-lg font-bold text-primary">Apa itu ESign Balikpapan?</h3>
 <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
