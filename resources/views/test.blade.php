@@ -1,338 +1,344 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Tanda Tangan Digital Balikpapan - Keamanan Identitas Digital</title>
-<link rel="icon" type="png" href="{{ asset('images/bpn_logo.png') }}">
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        "colors": {
-          "inverse-surface": "#2c3137",
-          "on-secondary-fixed-variant": "#005137",
-          "primary": "#001e40",
-          "on-secondary-fixed": "#002114",
-          "primary-fixed-dim": "#a7c8ff",
-          "surface": "#f8f9ff",
-          "surface-container-low": "#f0f4fd",
-          "surface-dim": "#d6dae3",
-          "tertiary": "#002316",
-          "secondary-container": "#82f5c1",
-          "on-surface": "#171c22",
-          "on-tertiary-fixed": "#002114",
-          "secondary-fixed": "#85f8c4",
-          "error": "#ba1a1a",
-          "on-surface-variant": "#43474f",
-          "on-primary-fixed": "#001b3c",
-          "surface-container-highest": "#dee3eb",
-          "secondary": "#006c4a",
-          "on-primary": "#ffffff",
-          "on-secondary-container": "#00714e",
-          "secondary-fixed-dim": "#68dba9",
-          "surface-container-lowest": "#ffffff",
-          "surface-tint": "#3a5f94",
-          "surface-container-high": "#e4e8f1",
-          "background": "#f8f9ff",
-          "primary-container": "#003366",
-          "outline": "#737780",
-          "on-secondary": "#ffffff",
-          "surface-bright": "#f8f9ff",
-          "tertiary-container": "#003b27",
-          "surface-variant": "#dee3eb",
-          "on-primary-container": "#799dd6",
-          "tertiary-fixed": "#85f8c4",
-          "inverse-primary": "#a7c8ff",
-          "inverse-on-surface": "#edf1fa",
-          "error-container": "#ffdad6",
-          "tertiary-fixed-dim": "#68dba9",
-          "on-error-container": "#93000a",
-          "surface-container": "#eaeef7",
-          "on-tertiary-container": "#35ae7f",
-          "on-tertiary-fixed-variant": "#005137",
-          "primary-fixed": "#d5e3ff",
-          "outline-variant": "#c3c6d1",
-          "on-tertiary": "#ffffff",
-          "on-primary-fixed-variant": "#1f477b",
-          "on-background": "#171c22",
-          "on-error": "#ffffff"
-        },
-        "borderRadius": {
-          "DEFAULT": "0.125rem",
-          "lg": "0.25rem",
-          "xl": "0.5rem",
-          "full": "0.75rem"
-        },
-        "fontFamily": {
-          "headline": ["Public Sans"],
-          "body": ["Public Sans"],
-          "label": ["Public Sans"]
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Verifikasi Dokumen - Komdigi</title>
+    <link rel="icon" type="png" href="images/Logo_Kementerian_Komunikasi_dan_Digital_Republik_Indonesia_(2024_full_version).svg.png">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <style>
+        /* CSS RESET & BASE */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Public Sans', sans-serif; background: #f8f9ff; color: #171c22; min-height: 100vh; display: flex; flex-direction: column; }
+        
+        .page { display: none; flex-direction: column; min-height: 100vh; }
+        .page.active { display: flex; }
+
+        /* RESPONSIVE NAVIGATION */
+        nav { 
+            background: rgba(255,255,255,0.92); 
+            backdrop-filter: blur(16px); 
+            border-bottom: 1px solid #e4e8f1; 
+            padding: 1rem; 
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            gap: 15px;
+            position: sticky; 
+            top: 0; 
+            z-index: 50; 
         }
-      },
-    },
-  }
-</script>
-<style>
-  body { font-family: 'Public Sans', sans-serif; }
-  .material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-  }
-  .hero-gradient {
-    background: linear-gradient(135deg, #001e40 0%, #003366 100%);
-  }
-  .glass-panel {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(24px);
-  }
 
-  /* ── Page load fade-in ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-  }
+        @media(min-width: 768px) {
+            nav { 
+                flex-direction: row; 
+                justify-content: space-between; 
+                height: 80px; 
+                padding: 0 2rem;
+            }
+        }
 
-  .anim-fade-up {
-    opacity: 0;
-    animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  }
-  .anim-fade-in {
-    opacity: 0;
-    animation: fadeIn 0.6s ease forwards;
-  }
+        .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .nav-logo-img { height: 40px; width: auto; object-fit: contain; }
+        
+        .nav-brand-text {
+            border-left: 1px solid #c3c6d1;
+            padding-left: 12px;
+            display: flex;
+            flex-direction: column;
+        }
 
-  .delay-1 { animation-delay: 0.10s; }
-  .delay-2 { animation-delay: 0.25s; }
-  .delay-3 { animation-delay: 0.40s; }
-  .delay-4 { animation-delay: 0.55s; }
+        .nav-title { font-weight: 800; color: #001e40; font-size: 13px; letter-spacing: -0.3px; line-height: 1.2; }
+        .nav-subtitle { font-size: 9px; color: #43474f; text-transform: uppercase; letter-spacing: 0.5px; }
 
-  /* ── Navbar scroll effect ── */
-  nav {
-    transition: background 0.35s ease, box-shadow 0.35s ease, backdrop-filter 0.35s ease;
-  }
-  nav.scrolled {
-    background: rgba(255,255,255,0.97) !important;
-    box-shadow: 0 2px 16px rgba(0,30,64,0.10);
-  }
+        .nav-links { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; justify-content: center; }
+        .nav-link { color: #43474f; font-size: 14px; font-weight: 500; text-decoration: none; transition: 0.2s; }
+        .nav-link:hover, .nav-link.active { color: #001e40; font-weight: 700; }
+        .nav-btn { background: #001e40; color: #fff; border: none; padding: 8px 18px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; }
 
-  nav button, nav a {
-    transition: color 0.2s ease, opacity 0.2s ease;
-  }
+        /* LAYOUT */
+        main { flex: 1; padding: 1.5rem 1rem; max-width: 1000px; margin: 0 auto; width: 100%; }
+        header { text-align: center; margin-bottom: 2rem; }
+        h1 { font-size: clamp(1.5rem, 5vw, 2.5rem); font-weight: 800; color: #001e40; margin-bottom: 10px; line-height: 1.2; }
+        .subtitle { color: #43474f; max-width: 600px; margin: 0 auto; font-size: 0.95rem; line-height: 1.6; }
 
-  /* ── Hero CTA buttons ── */
-  .hero-btn-primary {
-    transition: transform 0.22s cubic-bezier(0.22,1,0.36,1),
-                box-shadow 0.22s ease,
-                background 0.2s ease;
-  }
-  .hero-btn-primary:hover {
-    transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 12px 32px rgba(0,108,74,0.35);
-  }
-  .hero-btn-primary:active { transform: scale(0.97); }
+        /* GRID SYSTEM */
+        .grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+        @media(min-width: 900px) { .grid { grid-template-columns: 2fr 1fr; } }
 
-  .hero-btn-ghost {
-    transition: transform 0.22s cubic-bezier(0.22,1,0.36,1),
-                background 0.2s ease,
-                border-color 0.2s ease;
-  }
-  .hero-btn-ghost:hover {
-    transform: translateY(-2px) scale(1.03);
-    background: rgba(255,255,255,0.22);
-  }
-  .hero-btn-ghost:active { transform: scale(0.97); }
+        /* CARDS */
+        .card { background: #ffffff; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); padding: 1.5rem; position: relative; }
+        @media(min-width: 768px) { .card { padding: 2rem; } }
 
-  /* ── Login button ── */
-  .nav-login-btn {
-    transition: transform 0.2s cubic-bezier(0.22,1,0.36,1),
-                box-shadow 0.2s ease,
-                background 0.2s ease;
-  }
-  .nav-login-btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 6px 18px rgba(0,30,64,0.25);
-  }
-  .nav-login-btn:active { transform: scale(0.96); }
+        .card-header { display: flex; justify-content: space-between; margin-bottom: 1.5rem; }
+        .card-title { font-weight: 700; color: #001e40; font-size: 17px; }
+        .card-icon { background: #f0f4fd; padding: 8px; border-radius: 8px; display: flex; color: #001e40; }
 
-  /* ── Scroll-reveal ── */
-  .reveal {
-    opacity: 0;
-    transform: translateY(32px);
-    transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1),
-                transform 0.65s cubic-bezier(0.22,1,0.36,1);
-  }
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+        /* DROP ZONE */
+        .drop-zone { 
+            border: 2px dashed #c3c6d1; 
+            border-radius: 14px; 
+            padding: 2.5rem 1rem; 
+            background: #f8f9ff; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center; 
+            position: relative; 
+            transition: 0.3s;
+        }
+        .drop-zone:hover { border-color: #006c4a; background: #f0fdf8; }
+        .drop-zone input[type=file] { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+        
+        .upload-icon-wrap { width: 60px; height: 60px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); color: #001e40; }
+        .browse-btn { background: #001e40; color: #fff; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; margin-top: 15px; }
 
-  footer a { transition: color 0.2s ease; }
-</style>
+        /* SECURITY BADGES */
+        .security-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; justify-content: center; }
+        .sec-badge { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #555; background: #eee; padding: 5px 10px; border-radius: 6px; }
+
+        /* SIDEBAR CARDS */
+        .side-cards { display: flex; flex-direction: column; gap: 1.25rem; }
+        .info-card { background: #fff; border-radius: 14px; padding: 1.25rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+        .info-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #f0f4fd; font-size: 13px; }
+        
+        .dark-card { background: #001e40; color: #fff; border-radius: 14px; padding: 1.5rem; position: relative; overflow: hidden; }
+        .dark-card h3 { font-size: 15px; margin-bottom: 8px; z-index: 2; position: relative; }
+        .dark-card p { font-size: 13px; color: #abc4ff; z-index: 2; position: relative; }
+        .bg-icon { position: absolute; right: -10px; bottom: -10px; opacity: 0.1; font-size: 80px; }
+
+        /* RESULTS PAGE STYLING */
+        .results-main { flex: 1; padding: 1.5rem 1rem; max-width: 800px; margin: 0 auto; width: 100%; }
+        .result-hero { 
+            background: #fff; border-radius: 16px; padding: 1.5rem; 
+            display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 1.5rem;
+        }
+        @media(min-width: 600px) {
+            .result-hero { flex-direction: row; text-align: left; padding: 2rem; }
+        }
+
+        .result-status-icon { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: #d1fae5; color: #006c4a; flex-shrink: 0; }
+        
+        .detail-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+        @media(min-width: 500px) { .detail-grid { grid-template-columns: 1fr 1fr; } }
+        
+        .sig-row { display: flex; flex-direction: column; gap: 12px; padding: 15px 0; border-bottom: 1px solid #f0f4fd; }
+        @media(min-width: 480px) { .sig-row { flex-direction: row; align-items: center; } }
+        
+        .sig-avatar { width: 44px; height: 44px; border-radius: 50%; background: #e6f1fb; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #185fa5; flex-shrink: 0; }
+        .hash-box { background: #f0f4fd; border-radius: 10px; padding: 1rem; font-family: monospace; font-size: 11px; word-break: break-all; }
+
+        footer { background: #f0f4fd; padding: 2rem 1rem; text-align: center; border-top: 1px solid #e4e8f1; margin-top: auto; }
+        .footer-copy { font-size: 12px; color: #666; line-height: 1.5; }
+
+        /* LOADING */
+        .loading-state { display: flex; flex-direction: column; align-items: center; padding: 3rem 1rem; }
+        .spinner { width: 40px; height: 40px; border: 4px solid #e4e8f1; border-top-color: #001e40; border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: 1rem; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
 </head>
-<body class="bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<body>
 
-<!-- TopNavBar -->
-<nav id="navbar" class="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-xl shadow-sm">
-  <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-    <div class="anim-fade-in delay-1 text-lg font-bold text-blue-900 uppercase tracking-wider font-headline">
-      <div class="flex items-center gap-2">
-        <img src="images\bpn_logo.png" alt="Logo Komdigi" class="h-12 w-auto object-contain">
-        <span class="text-xl font-extrabold tracking-tight capitalize">ESign Balikpapan</span>
-      </div>
-    </div>
-    <div class="anim-fade-in delay-2 flex items-center gap-4">
-      <button class="hidden sm:block text-on-primary-fixed-variant font-medium px-4 py-2 hover:text-secondary hover:underline">FAQ</button>
-      <button class="nav-login-btn bg-primary hover:bg-primary-container text-white px-6 py-2.5 rounded-xl font-semibold shadow-md">Login</button>
-    </div>
-  </div>
-</nav>
+<div class="page active" id="page-upload">
+    <nav>
+        <a href="#" class="nav-brand">
+            <img src="images/penyelenggara-sertifikat-elektronik.9fd08b9e.png" alt="Logo Komdigi" class="nav-logo-img">
+            <div class="nav-brand-text">
+                <span class="nav-title">VERIFIKASI DOKUMEN</span>
+                <span class="nav-subtitle">DIREKTORAT JENDERAL PRD</span>
+            </div>
+        </a>
+        <div class="nav-links">
+            <a class="nav-link" href="http://edocumentweb.test">Beranda</a>
+            <a class="nav-link" href="#">Layanan</a>
+            <a class="nav-link active" href="#">Verifikasi</a>
+            <button class="nav-btn">Login</button>
+        </div>
+    </nav>
 
-<main class="pt-20">
-  <!-- Hero Section -->
-  <section class="relative overflow-hidden bg-primary py-24 lg:py-40">
-    <div class="absolute inset-0 opacity-20">
-      <img class="w-full h-full object-cover" alt="Background" src="images\fb-img-1544930552936-5c84b5b0ab12ae4d7e24c403.jpg"/>
-    </div>
-    <div class="max-w-7xl mx-auto px-6 relative z-10 flex flex-col items-center text-center">
-      <div class="max-w-4xl">
-        <h1 class="anim-fade-up delay-1 text-5xl lg:text-8xl font-extrabold text-white leading-tight tracking-tighter mb-8">
-          Tanda tangan dengan mudah di ESign Balikpapan.
-        </h1>
-        <p class="anim-fade-up delay-2 text-xl lg:text-2xl text-on-primary-container leading-relaxed mb-12 max-w-2xl mx-auto">
-          Solusi tanda tangan elektronik tersertifikasi untuk Pemerintah Kota Balikpapan. Percepat birokrasi dengan keamanan standar nasional.
-        </p>
-        <div class="anim-fade-up delay-3 flex flex-wrap justify-center gap-6">
-          <a href="http://edocumentweb.test/verification"><button class="hero-btn-primary px-10 py-5 bg-secondary text-white rounded-xl font-bold flex items-center gap-3">
-            <span class="material-symbols-outlined">edit_document</span>
-            Mulai Verifikasi
-          </button></a>
-          <button class="hero-btn-ghost px-10 py-5 bg-white/10 text-white border border-white/20 rounded-xl font-bold backdrop-blur-sm">
-            Cek Panduan
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
+    <main>
+        <header>
+            <h1>Validasi Keaslian Dokumen</h1>
+            <p class="subtitle">Unggah dokumen PDF bertanda tangan elektronik untuk memverifikasi integritas data dan identitas penandatangan secara instan.</p>
+        </header>
 
-  <section class="py-24 bg-surface-container-lowest">
-<div class="max-w-3xl mx-auto px-6">
-<div class="text-center mb-16">
-<h2 class="text-4xl font-extrabold text-primary tracking-tight mb-4">Pertanyaan yang Sering Diajukan</h2>
-<p class="text-on-surface-variant text-lg">Temukan jawaban untuk hal-hal yang sering ditanyakan mengenai layanan kami.</p>
-</div>
-<div class="space-y-4">
-<details class="group bg-surface rounded-2xl border border-outline-variant/30 overflow-hidden" open="">
-<summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-<h3 class="text-lg font-bold text-primary">Apa itu ESign Balikpapan?</h3>
-<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
-ESign Balikpapan adalah platform resmi layanan tanda tangan elektronik (digital signature) milik Pemerintah Kota Balikpapan yang memungkinkan aparatur dan masyarakat untuk menandatangani dokumen secara digital dengan keabsahan hukum yang setara dengan tanda tangan basah.
-</div>
-</details>
-<details class="group bg-surface rounded-2xl border border-outline-variant/30 overflow-hidden">
-<summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-<h3 class="text-lg font-bold text-primary">Apakah tanda tangan ini sah secara hukum?</h3>
-<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
-Ya, sangat sah. Layanan kami telah sesuai dengan UU No. 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik (ITE) serta PP No. 71 Tahun 2019. Sertifikat elektronik yang diterbitkan memiliki kekuatan hukum yang kuat dan dapat dibuktikan integritasnya.
-</div>
-</details>
-<details class="group bg-surface rounded-2xl border border-outline-variant/30 overflow-hidden">
-<summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-<h3 class="text-lg font-bold text-primary">Bagaimana cara memverifikasi dokumen?</h3>
-<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
-Anda dapat menggunakan fitur "Verifikasi Dokumen" di portal ini dengan mengunggah file PDF yang telah ditandatangani. Sistem akan memeriksa validitas sertifikat elektronik dan memastikan bahwa isi dokumen tidak mengalami perubahan sejak ditandatangani.
-</div>
-</details>
-<details class="group bg-surface rounded-2xl border border-outline-variant/30 overflow-hidden">
-<summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-<h3 class="text-lg font-bold text-primary">Apakah layanan ini gratis?</h3>
-<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
-Layanan ESign Balikpapan disediakan secara gratis bagi aparatur sipil negara di lingkungan Pemerintah Kota Balikpapan dan masyarakat untuk kebutuhan administrasi publik tertentu sesuai dengan kebijakan pemerintah kota guna mendukung percepatan transformasi digital.
-</div>
-</details>
-<details class="group bg-surface rounded-2xl border border-outline-variant/30 overflow-hidden">
-<summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-<h3 class="text-lg font-bold text-primary">Apa yang dibutuhkan untuk mendaftar?</h3>
-<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
-Untuk warga, Anda membutuhkan KTP elektronik yang valid dan nomor ponsel aktif. Untuk ASN, pendaftaran dilakukan melalui verifikasi data kepegawaian resmi yang terintegrasi dengan sistem kepegawaian kota.
-</div>
-</details>
-</div>
-</div>
-</section>
+        <div class="grid">
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Unggah PDF</div>
+                        <p style="font-size:13px; color:#666;">Pastikan dokumen dalam format PDF.</p>
+                    </div>
+                    <div class="card-icon"><span class="material-symbols-outlined">description</span></div>
+                </div>
 
-  <!-- Footer -->
-  <footer class="reveal bg-slate-50 border-t border-slate-200 w-full mt-auto">
-    <div class="max-w-7xl mx-auto px-8 py-12 flex flex-col md:flex-row justify-between gap-8">
-      <div class="max-w-xs">
-        <div class="font-bold text-blue-900 mb-4 font-headline uppercase tracking-wider">Tanda Tangan Digital Balikpapan</div>
-        <p class="text-slate-500 text-sm leading-relaxed mb-6">Layanan sertifikasi elektronik resmi di bawah Dinas Komunikasi dan Informatika Pemerintah Kota Balikpapan.</p>
-        <div class="flex gap-4">
-          <span class="w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 material-symbols-outlined text-sm cursor-pointer hover:bg-slate-300 transition-colors duration-200">public</span>
-          <span class="w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 material-symbols-outlined text-sm cursor-pointer hover:bg-slate-300 transition-colors duration-200">mail</span>
+                <div class="drop-zone" id="dropZone">
+                    <input type="file" id="fileInput" accept=".pdf" />
+                    <div class="upload-icon-wrap"><span class="material-symbols-outlined" style="font-size:32px;">cloud_upload</span></div>
+                    <h3>Tarik & Lepas File Di Sini</h3>
+                    <p style="font-size:14px; color:#666;">Atau klik untuk memilih file</p>
+                </div>
+
+                <div class="security-row">
+                    <div class="sec-badge"><span class="material-symbols-outlined" style="font-size:14px;">lock</span> SSL 256-bit</div>
+                    <div class="sec-badge"><span class="material-symbols-outlined" style="font-size:14px;">verified_user</span> BSSN</div>
+                    <div class="sec-badge"><span class="material-symbols-outlined" style="font-size:14px;">delete</span> Auto Delete</div>
+                </div>
+            </div>
+
+            <div class="side-cards">
+                <div class="info-card">
+                    <h3 style="font-size:11px; letter-spacing:1px; text-transform:uppercase; margin-bottom:10px;">Status Sistem</h3>
+                    <div class="info-row"><span>Waktu Server</span><span id="serverTime">--:-- WITA</span></div>
+                    <div class="info-row"><span>Status CA</span><span style="color:#006c4a; font-weight:bold;">● Aktif</span></div>
+                    <div class="info-row"><span>Kecepatan</span><span>&lt; 1 Detik</span></div>
+                </div>
+
+                <div class="dark-card">
+                    <span class="material-symbols-outlined" style="margin-bottom:10px;">gpp_maybe</span>
+                    <h3>Periksa Keaslian</h3>
+                    <p>Pastikan segel biru atau QR Code terlihat jelas pada dokumen Anda.</p>
+                    <span class="material-symbols-outlined bg-icon">security</span>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="grid grid-cols-2 gap-12">
-        <div>
-          <h5 class="text-primary font-bold text-sm mb-6 uppercase tracking-widest">Legalitas</h5>
-          <ul class="space-y-4">
-            <li><a class="text-slate-500 text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#">Undang-Undang ITE</a></li>
-            <li><a class="text-slate-500 text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#">PP Penyelenggaraan Sistem Elektronik</a></li>
-            <li><a class="text-slate-500 text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#">Kebijakan Privasi</a></li>
-          </ul>
+    </main>
+
+    <footer>
+        <p class="footer-copy">© 2026 Direktorat Jenderal Pengawasan Ruang Digital.<br>Kementerian Komunikasi dan Digital.</p>
+    </footer>
+</div>
+
+<div class="page" id="page-results">
+    <nav>
+        <a href="#" class="nav-brand">
+            <img src="images/penyelenggara-sertifikat-elektronik.9fd08b9e.png" alt="Logo Komdigi" class="nav-logo-img">
+            <div class="nav-brand-text">
+                <span class="nav-title">HASIL VERIFIKASI</span>
+                <span class="nav-subtitle">DIREKTORAT JENDERAL PRD</span>
+            </div>
+        </a>
+        <button class="nav-btn" onclick="goBack()">Kembali</button>
+    </nav>
+
+    <div class="results-main">
+        <div class="loading-state" id="loadingState">
+            <div class="spinner"></div>
+            <p>Menganalisis Sertifikat Digital...</p>
         </div>
-        <div>
-          <h5 class="text-primary font-bold text-sm mb-6 uppercase tracking-widest">Bantuan</h5>
-          <ul class="space-y-4">
-            <li><a class="text-slate-500 text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#">Kontak Resmi</a></li>
-            <li><a class="text-slate-500 text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#">Pusat Bantuan</a></li>
-            <li><a class="text-slate-500 text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#">FAQ</a></li>
-          </ul>
+
+        <div id="resultsContent" style="display:none;">
+            <div class="result-hero">
+                <div class="result-status-icon">
+                    <span class="material-symbols-outlined" style="font-size:35px;">verified</span>
+                </div>
+                <div>
+                    <h2 id="resultFileName" style="font-size:18px; color:#001e40;">dokumen.pdf</h2>
+                    <p style="color:#006c4a; font-weight:600; font-size:14px;">Tanda Tangan Elektronik Valid</p>
+                </div>
+            </div>
+
+            <h3 style="font-size:12px; text-transform:uppercase; margin:20px 0 10px;">Detail Dokumen</h3>
+            <div class="card" style="margin-bottom:20px;">
+                <div class="detail-grid">
+                    <div class="detail-item"><label style="font-size:11px; color:#666; display:block;">Ukuran</label><span id="detailFileSize" style="font-weight:600;">-</span></div>
+                    <div class="detail-item"><label style="font-size:11px; color:#666; display:block;">Waktu Verifikasi</label><span id="detailDate" style="font-weight:600;">-</span></div>
+                    <div class="detail-item"><label style="font-size:11px; color:#666; display:block;">Integritas</label><span style="color:#006c4a; font-weight:600;">Utuh (Tidak Diubah)</span></div>
+                </div>
+            </div>
+
+            <h3 style="font-size:12px; text-transform:uppercase; margin-bottom:10px;">Penandatangan</h3>
+            <div class="card">
+                <div class="sig-row">
+                    <div class="sig-avatar">II</div>
+                    <div class="sig-info">
+                        <div style="font-weight:700; font-size:14px;">Insert Nama</div>
+                        <div style="font-size:12px; color:#666;">Insert Nama Tempat</div>
+                    </div>
+                    <span class="material-symbols-outlined" style="color:#006c4a; margin-left:auto;">check_circle</span>
+                </div>
+            </div>
+
+            <h3 style="font-size:12px; text-transform:uppercase; margin:20px 0 10px;">Digital Fingerprint (SHA-256)</h3>
+            <div class="hash-box" id="hashBox">--</div>
         </div>
-      </div>
     </div>
-    <div class="max-w-7xl mx-auto px-8 py-6 border-t border-slate-100 flex justify-between items-center text-slate-500 text-xs">
-      <p>© 2026 Pemerintah Kota Balikpapan. Hak Cipta Dilindungi Undang-Undang.</p>
-      <p>Versi 2.4.0</p>
-    </div>
-  </footer>
-</main>
+
+    <footer>
+        <p class="footer-copy">Dokumen ini telah diverifikasi oleh sistem Otoritas Sertifikat Digital.</p>
+    </footer>
+</div>
 
 <script>
-  // Navbar solidifies on scroll
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 20);
-  }, { passive: true });
+    // Update Server Time
+    function updateTime() {
+        const now = new Date();
+        const wita = new Date(now.getTime() + (8 * 60 * 60 * 1000));
+        const timeStr = now.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        const el = document.getElementById('serverTime');
+        if (el) el.textContent = timeStr + ' WITA';
+    }
+    setInterval(updateTime, 1000);
+    updateTime();
 
-  // Scroll-reveal for footer
-  const revealEls = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
+    // File Helpers
+    function formatBytes(bytes) {
+        if (bytes < 1024) return bytes + ' B';
+        if (bytes < 1024*1024) return (bytes/1024).toFixed(1) + ' KB';
+        return (bytes/(1024*1024)).toFixed(2) + ' MB';
+    }
+
+    function generateHash(str) {
+        return Array.from(str).reduce((acc, char) => acc + char.charCodeAt(0).toString(16), '').substring(0, 64);
+    }
+
+    // Navigation
+    function goBack() {
+        document.getElementById('page-results').classList.remove('active');
+        document.getElementById('page-upload').classList.add('active');
+        document.getElementById('fileInput').value = '';
+    }
+
+    function processFile(file) {
+        if (!file || file.type !== 'application/pdf') {
+            alert('Mohon unggah file PDF.');
+            return;
+        }
+
+        document.getElementById('page-upload').classList.remove('active');
+        document.getElementById('page-results').classList.add('active');
+        document.getElementById('loadingState').style.display = 'flex';
+        document.getElementById('resultsContent').style.display = 'none';
+
+        setTimeout(() => {
+            const now = new Date();
+            document.getElementById('resultFileName').textContent = file.name;
+            document.getElementById('detailFileSize').textContent = formatBytes(file.size);
+            document.getElementById('detailDate').textContent = now.toLocaleString('id-ID') + ' WITA';
+            document.getElementById('hashBox').textContent = generateHash(file.name + file.size);
+
+            document.getElementById('loadingState').style.display = 'none';
+            document.getElementById('resultsContent').style.display = 'block';
+        }, 1500);
+    }
+
+    // Events
+    const fileInput = document.getElementById('fileInput');
+    const dropZone = document.getElementById('dropZone');
+
+    fileInput.addEventListener('change', (e) => {
+        if (e.target.files[0]) processFile(e.target.files[0]);
     });
-  }, { threshold: 0.12 });
-  revealEls.forEach(el => observer.observe(el));
+
+    dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.style.borderColor = '#006c4a'; });
+    dropZone.addEventListener('dragleave', () => { dropZone.style.borderColor = '#c3c6d1'; });
+    dropZone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        if (e.dataTransfer.files[0]) processFile(e.dataTransfer.files[0]);
+    });
 </script>
 </body>
 </html>

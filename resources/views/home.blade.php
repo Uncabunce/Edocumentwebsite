@@ -189,7 +189,7 @@
       </div>
     </div>
     <div class="anim-fade-in delay-2 flex items-center gap-4">
-      <button class="hidden sm:block text-on-primary-fixed-variant font-medium px-4 py-2 hover:text-secondary hover:underline">FAQ</button>
+      <a href="#faq-section"><button class="hidden sm:block text-on-primary-fixed-variant font-medium px-4 py-2 hover:text-secondary hover:underline">FAQ</button></a>
       <button class="nav-login-btn bg-primary hover:bg-primary-container text-white px-6 py-2.5 rounded-xl font-semibold shadow-md">Login</button>
     </div>
   </div>
@@ -222,7 +222,8 @@
     </div>
   </section>
 
-  <section class="py-24 bg-surface-container-lowest">
+<!-- FAQ Section -->
+  <section id="faq-section" class="py-24 bg-surface-container-lowest">
 <div class="max-w-3xl mx-auto px-6">
 <div class="text-center mb-16">
 <h2 class="text-4xl font-extrabold text-primary tracking-tight mb-4">Pertanyaan yang Sering Diajukan</h2>
@@ -303,7 +304,7 @@ Untuk warga, Anda membutuhkan KTP elektronik yang valid dan nomor ponsel aktif. 
           <ul class="space-y-4">
             <li><a class="text-slate-500 text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#">Kontak Resmi</a></li>
             <li><a class="text-slate-500 text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#">Pusat Bantuan</a></li>
-            <li><a class="text-slate-500 text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#">FAQ</a></li>
+            <li><a class="text-slate-500 text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#faq-section">FAQ</a></li>
           </ul>
         </div>
       </div>
