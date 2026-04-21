@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" id="root-html">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -78,7 +78,7 @@
   }
 </script>
 <style>
-  body { font-family: 'Public Sans', sans-serif; }
+  body { font-family: 'Public Sans', sans-serif; transition: background-color 0.3s, color 0.3s; }
   .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
   }
@@ -90,7 +90,6 @@
     backdrop-filter: blur(24px);
   }
 
-  /* ── Page load fade-in ── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -114,7 +113,6 @@
   .delay-3 { animation-delay: 0.40s; }
   .delay-4 { animation-delay: 0.55s; }
 
-  /* ── Navbar scroll effect ── */
   nav {
     transition: background 0.35s ease, box-shadow 0.35s ease, backdrop-filter 0.35s ease;
   }
@@ -122,12 +120,15 @@
     background: rgba(255,255,255,0.97) !important;
     box-shadow: 0 2px 16px rgba(0,30,64,0.10);
   }
+  .dark nav.scrolled {
+    background: rgba(23, 28, 34, 0.95) !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  }
 
   nav button, nav a {
     transition: color 0.2s ease, opacity 0.2s ease;
   }
 
-  /* ── Hero CTA buttons ── */
   .hero-btn-primary {
     transition: transform 0.22s cubic-bezier(0.22,1,0.36,1),
                 box-shadow 0.22s ease,
@@ -150,7 +151,6 @@
   }
   .hero-btn-ghost:active { transform: scale(0.97); }
 
-  /* ── Login button ── */
   .nav-login-btn {
     transition: transform 0.2s cubic-bezier(0.22,1,0.36,1),
                 box-shadow 0.2s ease,
@@ -162,7 +162,6 @@
   }
   .nav-login-btn:active { transform: scale(0.96); }
 
-  /* ── Scroll-reveal ── */
   .reveal {
     opacity: 0;
     transform: translateY(32px);
@@ -177,26 +176,29 @@
   footer a { transition: color 0.2s ease; }
 </style>
 </head>
-<body class="bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<body class="bg-surface text-on-surface dark:bg-inverse-surface dark:text-surface-container-lowest selection:bg-secondary-container selection:text-on-secondary-container">
 
-<!-- TopNavBar -->
-<nav id="navbar" class="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-xl shadow-sm">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex justify-between items-center">
+<nav id="navbar" class="fixed top-0 w-full z-50 bg-white/85 dark:bg-on-surface/90 backdrop-blur-xl shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex justify-between items-center gap-2">
     
-    <div class="anim-fade-in delay-1 text-lg font-bold text-blue-900 uppercase tracking-wider font-headline">
-      <div class="flex items-center gap-2">
-        <img src="images\bpn_logo.png" alt="Logo Komdigi" class="h-10 sm:h-12 w-auto object-contain">
-        <span class="text-lg sm:text-xl font-extrabold tracking-tight capitalize">ESign Balikpapan</span>
-      </div>
+    <div class="anim-fade-in delay-1 flex items-center gap-2 flex-shrink-0">
+      <img src="images/bpn_logo.png" alt="Logo" class="h-8 sm:h-10 md:h-12 w-auto object-contain">
+      <span class="text-sm sm:text-lg md:text-xl font-extrabold tracking-tight capitalize text-blue-900 dark:text-primary-fixed-dim whitespace-nowrap">
+        ESign Balikpapan
+      </span>
     </div>
 
-    <div class="anim-fade-in delay-2 flex items-center gap-2 sm:gap-4">
+    <div class="anim-fade-in delay-2 flex items-center gap-1 sm:gap-4 flex-shrink-0">
+      <button id="dark-mode-toggle" class="p-2 rounded-full hover:bg-surface-container-high dark:hover:bg-primary-container transition-colors flex items-center justify-center">
+        <span id="dark-mode-icon" class="material-symbols-outlined text-primary dark:text-white text-xl sm:text-2xl">dark_mode</span>
+      </button>
+
       <a href="#faq-section">
-        <button class="text-on-primary-fixed-variant text-sm sm:text-base font-medium px-2 sm:px-4 py-2 hover:text-secondary hover:underline">
+        <button class="text-on-primary-fixed-variant dark:text-surface-variant text-xs sm:text-base font-medium px-1 sm:px-4 py-2 hover:text-secondary hover:underline">
           FAQ
         </button>
       </a>
-      <button class="nav-login-btn bg-primary hover:bg-primary-container text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl text-sm sm:text-base font-semibold shadow-md">
+      <button class="nav-login-btn bg-primary dark:bg-secondary hover:bg-primary-container text-white px-3 sm:px-6 py-2 sm:py-2.5 rounded-xl text-xs sm:text-base font-semibold shadow-md">
         Login
       </button>
     </div>
@@ -205,25 +207,26 @@
 </nav>
 
 <main class="pt-20">
-  <!-- Hero Section -->
   <section class="relative overflow-hidden bg-primary py-24 lg:py-40">
     <div class="absolute inset-0 opacity-20">
-      <img class="w-full h-full object-cover" alt="Background" src="images\fb-img-1544930552936-5c84b5b0ab12ae4d7e24c403.jpg"/>
+      <img class="w-full h-full object-cover" alt="Background" src="images/fb-img-1544930552936-5c84b5b0ab12ae4d7e24c403.jpg"/>
     </div>
     <div class="max-w-7xl mx-auto px-6 relative z-10 flex flex-col items-center text-center">
       <div class="max-w-4xl">
-        <h1 class="anim-fade-up delay-1 text-5xl lg:text-8xl font-extrabold text-white leading-tight tracking-tighter mb-8">
+        <h1 class="anim-fade-up delay-1 text-4xl sm:text-5xl lg:text-8xl font-extrabold text-white leading-tight tracking-tighter mb-8">
           Tanda tangan dengan mudah di ESign Balikpapan.
         </h1>
-        <p class="anim-fade-up delay-2 text-xl lg:text-2xl text-on-primary-container leading-relaxed mb-12 max-w-2xl mx-auto">
+        <p class="anim-fade-up delay-2 text-lg sm:text-xl lg:text-2xl text-on-primary-container leading-relaxed mb-12 max-w-2xl mx-auto">
           Solusi tanda tangan elektronik tersertifikasi untuk Pemerintah Kota Balikpapan. Percepat birokrasi dengan keamanan standar nasional.
         </p>
-        <div class="anim-fade-up delay-3 flex flex-wrap justify-center gap-6">
-          <a href="http://edocumentweb.test/verification"><button class="hero-btn-primary px-10 py-5 bg-secondary text-white rounded-xl font-bold flex items-center gap-3">
-            <span class="material-symbols-outlined">edit_document</span>
-            Mulai Verifikasi
-          </button></a>
-          <button class="hero-btn-ghost px-10 py-5 bg-white/10 text-white border border-white/20 rounded-xl font-bold backdrop-blur-sm">
+        <div class="anim-fade-up delay-3 flex flex-wrap justify-center gap-4 sm:gap-6">
+          <a href="http://edocumentweb.test/verification" class="w-full sm:w-auto">
+            <button class="hero-btn-primary w-full px-10 py-5 bg-secondary text-white rounded-xl font-bold flex items-center justify-center gap-3">
+              <span class="material-symbols-outlined">edit_document</span>
+              Mulai Verifikasi
+            </button>
+          </a>
+          <button class="hero-btn-ghost w-full sm:w-auto px-10 py-5 bg-white/10 text-white border border-white/20 rounded-xl font-bold backdrop-blur-sm">
             Cek Panduan
           </button>
         </div>
@@ -231,56 +234,55 @@
     </div>
   </section>
 
-<!-- FAQ Section -->
-  <section id="faq-section" class="py-24 bg-surface-container-lowest">
+<section id="faq-section" class="py-24 bg-surface-container-lowest dark:bg-inverse-surface">
 <div class="max-w-3xl mx-auto px-6">
 <div class="text-center mb-16">
-<h2 class="text-4xl font-extrabold text-primary tracking-tight mb-4">Pertanyaan yang Sering Diajukan</h2>
-<p class="text-on-surface-variant text-lg">Temukan jawaban untuk hal-hal yang sering ditanyakan mengenai layanan kami.</p>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-primary dark:text-primary-fixed-dim tracking-tight mb-4">Pertanyaan yang Sering Diajukan</h2>
+<p class="text-on-surface-variant dark:text-outline-variant text-lg">Temukan jawaban untuk hal-hal yang sering ditanyakan mengenai layanan kami.</p>
 </div>
 <div class="space-y-4">
-<details class="group bg-surface rounded-2xl border border-outline-variant/30 overflow-hidden">
+<details class="group bg-surface dark:bg-primary-container/20 rounded-2xl border border-outline-variant/30 overflow-hidden">
 <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-<h3 class="text-lg font-bold text-primary">Apa itu ESign Balikpapan?</h3>
-<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+<h3 class="text-lg font-bold text-primary dark:text-white">Apa itu ESign Balikpapan?</h3>
+<span class="material-symbols-outlined text-primary dark:text-white group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+<div class="px-6 pb-6 text-on-surface-variant dark:text-surface-variant leading-relaxed">
 ESign Balikpapan adalah platform resmi layanan tanda tangan elektronik (digital signature) milik Pemerintah Kota Balikpapan yang memungkinkan aparatur dan masyarakat untuk menandatangani dokumen secara digital dengan keabsahan hukum yang setara dengan tanda tangan basah.
 </div>
 </details>
-<details class="group bg-surface rounded-2xl border border-outline-variant/30 overflow-hidden">
+<details class="group bg-surface dark:bg-primary-container/20 rounded-2xl border border-outline-variant/30 overflow-hidden">
 <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-<h3 class="text-lg font-bold text-primary">Apakah tanda tangan ini sah secara hukum?</h3>
-<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+<h3 class="text-lg font-bold text-primary dark:text-white">Apakah tanda tangan ini sah secara hukum?</h3>
+<span class="material-symbols-outlined text-primary dark:text-white group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+<div class="px-6 pb-6 text-on-surface-variant dark:text-surface-variant leading-relaxed">
 Ya, sangat sah. Layanan kami telah sesuai dengan UU No. 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik (ITE) serta PP No. 71 Tahun 2019. Sertifikat elektronik yang diterbitkan memiliki kekuatan hukum yang kuat dan dapat dibuktikan integritasnya.
 </div>
 </details>
-<details class="group bg-surface rounded-2xl border border-outline-variant/30 overflow-hidden">
+<details class="group bg-surface dark:bg-primary-container/20 rounded-2xl border border-outline-variant/30 overflow-hidden">
 <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-<h3 class="text-lg font-bold text-primary">Bagaimana cara memverifikasi dokumen?</h3>
-<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+<h3 class="text-lg font-bold text-primary dark:text-white">Bagaimana cara memverifikasi dokumen?</h3>
+<span class="material-symbols-outlined text-primary dark:text-white group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+<div class="px-6 pb-6 text-on-surface-variant dark:text-surface-variant leading-relaxed">
 Anda dapat menggunakan fitur "Verifikasi Dokumen" di portal ini dengan mengunggah file PDF yang telah ditandatangani. Sistem akan memeriksa validitas sertifikat elektronik dan memastikan bahwa isi dokumen tidak mengalami perubahan sejak ditandatangani.
 </div>
 </details>
-<details class="group bg-surface rounded-2xl border border-outline-variant/30 overflow-hidden">
+<details class="group bg-surface dark:bg-primary-container/20 rounded-2xl border border-outline-variant/30 overflow-hidden">
 <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-<h3 class="text-lg font-bold text-primary">Apakah layanan ini gratis?</h3>
-<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+<h3 class="text-lg font-bold text-primary dark:text-white">Apakah layanan ini gratis?</h3>
+<span class="material-symbols-outlined text-primary dark:text-white group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+<div class="px-6 pb-6 text-on-surface-variant dark:text-surface-variant leading-relaxed">
 Layanan ESign Balikpapan disediakan secara gratis bagi aparatur sipil negara di lingkungan Pemerintah Kota Balikpapan dan masyarakat untuk kebutuhan administrasi publik tertentu sesuai dengan kebijakan pemerintah kota guna mendukung percepatan transformasi digital.
 </div>
 </details>
-<details class="group bg-surface rounded-2xl border border-outline-variant/30 overflow-hidden">
+<details class="group bg-surface dark:bg-primary-container/20 rounded-2xl border border-outline-variant/30 overflow-hidden">
 <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-<h3 class="text-lg font-bold text-primary">Apa yang dibutuhkan untuk mendaftar?</h3>
-<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+<h3 class="text-lg font-bold text-primary dark:text-white">Apa yang dibutuhkan untuk mendaftar?</h3>
+<span class="material-symbols-outlined text-primary dark:text-white group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
-<div class="px-6 pb-6 text-on-surface-variant leading-relaxed">
+<div class="px-6 pb-6 text-on-surface-variant dark:text-surface-variant leading-relaxed">
 Untuk warga, Anda membutuhkan KTP elektronik yang valid dan nomor ponsel aktif. Untuk ASN, pendaftaran dilakukan melalui verifikasi data kepegawaian resmi yang terintegrasi dengan sistem kepegawaian kota.
 </div>
 </details>
@@ -288,37 +290,36 @@ Untuk warga, Anda membutuhkan KTP elektronik yang valid dan nomor ponsel aktif. 
 </div>
 </section>
 
-  <!-- Footer -->
-  <footer class="reveal bg-slate-50 border-t border-slate-200 w-full mt-auto">
+  <footer class="reveal bg-slate-50 dark:bg-on-surface border-t border-slate-200 dark:border-outline/20 w-full mt-auto">
     <div class="max-w-7xl mx-auto px-8 py-12 flex flex-col md:flex-row justify-between gap-8">
       <div class="max-w-xs">
-        <div class="font-bold text-blue-900 mb-4 font-headline uppercase tracking-wider">Tanda Tangan Digital Balikpapan</div>
-        <p class="text-slate-500 text-sm leading-relaxed mb-6">Layanan sertifikasi elektronik resmi di bawah Dinas Komunikasi dan Informatika Pemerintah Kota Balikpapan.</p>
+        <div class="font-bold text-blue-900 dark:text-primary-fixed-dim mb-4 font-headline uppercase tracking-wider">Tanda Tangan Digital Balikpapan</div>
+        <p class="text-slate-500 dark:text-outline-variant text-sm leading-relaxed mb-6">Layanan sertifikasi elektronik resmi di bawah Dinas Komunikasi dan Informatika Pemerintah Kota Balikpapan.</p>
         <div class="flex gap-4">
-          <span class="w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 material-symbols-outlined text-sm cursor-pointer hover:bg-slate-300 transition-colors duration-200">public</span>
-          <span class="w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 material-symbols-outlined text-sm cursor-pointer hover:bg-slate-300 transition-colors duration-200">mail</span>
+          <span class="w-8 h-8 bg-slate-200 dark:bg-primary-container rounded-full flex items-center justify-center text-slate-600 dark:text-white material-symbols-outlined text-sm cursor-pointer hover:bg-slate-300 transition-colors duration-200">public</span>
+          <span class="w-8 h-8 bg-slate-200 dark:bg-primary-container rounded-full flex items-center justify-center text-slate-600 dark:text-white material-symbols-outlined text-sm cursor-pointer hover:bg-slate-300 transition-colors duration-200">mail</span>
         </div>
       </div>
-      <div class="grid grid-cols-2 gap-12">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
         <div>
-          <h5 class="text-primary font-bold text-sm mb-6 uppercase tracking-widest">Legalitas</h5>
+          <h5 class="text-primary dark:text-white font-bold text-sm mb-6 uppercase tracking-widest">Legalitas</h5>
           <ul class="space-y-4">
-            <li><a class="text-slate-500 text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#">Undang-Undang ITE</a></li>
-            <li><a class="text-slate-500 text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#">PP Penyelenggaraan Sistem Elektronik</a></li>
-            <li><a class="text-slate-500 text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#">Kebijakan Privasi</a></li>
+            <li><a class="text-slate-500 dark:text-outline-variant text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#">Undang-Undang ITE</a></li>
+            <li><a class="text-slate-500 dark:text-outline-variant text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#">PP Penyelenggaraan Sistem Elektronik</a></li>
+            <li><a class="text-slate-500 dark:text-outline-variant text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#">Kebijakan Privasi</a></li>
           </ul>
         </div>
         <div>
-          <h5 class="text-primary font-bold text-sm mb-6 uppercase tracking-widest">Bantuan</h5>
+          <h5 class="text-primary dark:text-white font-bold text-sm mb-6 uppercase tracking-widest">Bantuan</h5>
           <ul class="space-y-4">
-            <li><a class="text-slate-500 text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#">Kontak Resmi</a></li>
-            <li><a class="text-slate-500 text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#">Pusat Bantuan</a></li>
-            <li><a class="text-slate-500 text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#faq-section">FAQ</a></li>
-          </ul>
+            <li><a class="text-slate-500 dark:text-outline-variant text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#">Kontak Resmi</a></li>
+            <li><a class="text-slate-500 dark:text-outline-variant text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#">Pusat Bantuan</a></li>
+            <li><a class="text-slate-500 dark:text-outline-variant text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#faq-section">FAQ</a></li>
+          </ul> 
         </div>
       </div>
     </div>
-    <div class="max-w-7xl mx-auto px-8 py-6 border-t border-slate-100 flex justify-between items-center text-slate-500 text-xs">
+    <div class="max-w-7xl mx-auto px-8 py-6 border-t border-slate-100 dark:border-outline/10 flex flex-col sm:flex-row justify-between items-center text-slate-500 dark:text-outline-variant text-xs gap-4">
       <p>© 2026 Pemerintah Kota Balikpapan. Hak Cipta Dilindungi Undang-Undang.</p>
       <p>Versi 2.4.0</p>
     </div>
@@ -326,6 +327,30 @@ Untuk warga, Anda membutuhkan KTP elektronik yang valid dan nomor ponsel aktif. 
 </main>
 
 <script>
+  // Dark Mode Logic
+  const darkToggle = document.getElementById('dark-mode-toggle');
+  const darkIcon = document.getElementById('dark-mode-icon');
+  const htmlRoot = document.getElementById('root-html');
+
+  if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    htmlRoot.classList.add('dark');
+    darkIcon.innerText = 'light_mode';
+  } else {
+    htmlRoot.classList.remove('dark');
+    darkIcon.innerText = 'dark_mode';
+  }
+
+  darkToggle.addEventListener('click', () => {
+    htmlRoot.classList.toggle('dark');
+    if (htmlRoot.classList.contains('dark')) {
+      localStorage.setItem('theme', 'dark');
+      darkIcon.innerText = 'light_mode';
+    } else {
+      localStorage.setItem('theme', 'light');
+      darkIcon.innerText = 'dark_mode';
+    }
+  });
+
   // Navbar solidifies on scroll
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
@@ -346,3 +371,5 @@ Untuk warga, Anda membutuhkan KTP elektronik yang valid dan nomor ponsel aktif. 
 </script>
 </body>
 </html>
+
+
