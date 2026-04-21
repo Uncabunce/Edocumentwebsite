@@ -247,7 +247,7 @@
 <span class="material-symbols-outlined text-primary dark:text-white group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <div class="px-6 pb-6 text-on-surface-variant dark:text-surface-variant leading-relaxed">
-ESign Balikpapan adalah platform resmi layanan tanda tangan elektronik (digital signature) milik Pemerintah Kota Balikpapan yang memungkinkan aparatur dan masyarakat untuk menandatangani dokumen secara digital dengan keabsahan hukum yang setara dengan tanda tangan basah.
+ESIGN adalah sistem tanda tangan elektronik yang memudahkan proses penandatanganan dokumen secara digital di Kota Balikpapan. Dengan ESIGN, Anda dapat menandatangani dokumen dengan mudah, aman, dan cepat tanpa perlu mencetak atau memindai dokumen.
 </div>
 </details>
 <details class="group bg-surface dark:bg-primary-container/20 rounded-2xl border border-outline-variant/30 overflow-hidden">
