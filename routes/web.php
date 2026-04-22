@@ -11,3 +11,9 @@ Route::get('/test', function () {
 Route::get('/verification', function () {
     return view('verification');
 });
+Route::get('/auth', function () {
+    return view('auth');
+});
+Route::get('/reset-password', function () {
+    return view('reset-password');
+});

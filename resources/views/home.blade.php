@@ -198,9 +198,9 @@
           FAQ
         </button>
       </a>
-      <button class="nav-login-btn bg-primary dark:bg-secondary hover:bg-primary-container text-white px-3 sm:px-6 py-2 sm:py-2.5 rounded-xl text-xs sm:text-base font-semibold shadow-md">
+      <a href="http://edocumentweb.test/auth"><button class="nav-login-btn bg-primary dark:bg-secondary hover:bg-primary-container text-white px-3 sm:px-6 py-2 sm:py-2.5 rounded-xl text-xs sm:text-base font-semibold shadow-md">
         Login
-      </button>
+      </button></a>
     </div>
 
   </div>
@@ -304,8 +304,8 @@ Untuk warga, Anda membutuhkan KTP elektronik yang valid dan nomor ponsel aktif. 
         <div>
           <h5 class="text-primary dark:text-white font-bold text-sm mb-6 uppercase tracking-widest">Legalitas</h5>
           <ul class="space-y-4">
-            <li><a class="text-slate-500 dark:text-outline-variant text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#">Undang-Undang ITE</a></li>
-            <li><a class="text-slate-500 dark:text-outline-variant text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#">PP Penyelenggaraan Sistem Elektronik</a></li>
+            <li><a class="text-slate-500 dark:text-outline-variant text-sm hover:text-emerald-500 underline transition-colors duration-200" href="https://ppidkemkominfo.wordpress.com/wp-content/uploads/2012/11/uu-no-11-tahun-2008-tentang-ite.pdf">Undang-Undang ITE</a></li>
+            <li><a class="text-slate-500 dark:text-outline-variant text-sm hover:text-emerald-500 underline transition-colors duration-200" href="https://jdih.komdigi.go.id/produk_hukum/view/id/695/t/peraturan+pemerintah+nomor+71+tahun+2019">PP Penyelenggaraan Sistem Elektronik</a></li>
             <li><a class="text-slate-500 dark:text-outline-variant text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#">Kebijakan Privasi</a></li>
           </ul>
         </div>
