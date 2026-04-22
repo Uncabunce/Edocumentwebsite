@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Verifikasi Dokumen - Komdigi</title>
-    <link rel="icon" type="png" href="images/Logo_Kementerian_Komunikasi_dan_Digital_Republik_Indonesia_(2024_full_version).svg.png">
+    <link rel="icon" type="png" href="images/bpn_logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <style>
@@ -177,7 +177,7 @@
 <div class="page active" id="page-upload">
     <nav>
         <a href="#" class="nav-brand">
-            <img src="images/penyelenggara-sertifikat-elektronik.9fd08b9e.png" alt="Logo Komdigi" class="nav-logo-img">
+            <img src="images/bpn_logo.png" alt="Logo Komdigi" class="nav-logo-img">
             <div class="nav-brand-text">
                 <span class="nav-title">VERIFIKASI DOKUMEN</span>
                 <span class="nav-subtitle">DIREKTORAT JENDERAL PRD</span>
@@ -191,7 +191,7 @@
             <button id="theme-toggle" title="Ganti Tema">
                 <span class="material-symbols-outlined">dark_mode</span>
             </button>
-            <button class="nav-btn">Login</button>
+            <button class="nav-btn">Log in</button>
         </div>
     </nav>
 
@@ -251,7 +251,7 @@
 <div class="page" id="page-results">
     <nav>
         <a href="#" class="nav-brand">
-            <img src="images/penyelenggara-sertifikat-elektronik.9fd08b9e.png" alt="Logo Komdigi" class="nav-logo-img">
+            <img src="images/bpn_logo.png" alt="Logo Komdigi" class="nav-logo-img">
             <div class="nav-brand-text">
                 <span class="nav-title">HASIL VERIFIKASI</span>
                 <span class="nav-subtitle">DIREKTORAT JENDERAL PRD</span>
