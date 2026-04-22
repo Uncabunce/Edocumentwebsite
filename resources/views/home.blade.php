@@ -199,7 +199,7 @@
         </button>
       </a>
       <a href="http://edocumentweb.test/auth"><button class="nav-login-btn bg-primary dark:bg-secondary hover:bg-primary-container text-white px-3 sm:px-6 py-2 sm:py-2.5 rounded-xl text-xs sm:text-base font-semibold shadow-md">
-        Login
+        Log in
       </button></a>
     </div>
 
