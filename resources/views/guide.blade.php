@@ -69,7 +69,7 @@
         </div>
 
         <div class="hidden md:flex items-center space-x-8 font-medium">
-            <a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white relative group" href="#">
+            <a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white relative group" href="http://edocumentweb.test">
                 Beranda
                 <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary dark:bg-blue-400 transition-all group-hover:w-full"></span>
             </a>
@@ -79,7 +79,7 @@
                 <span id="dark-icon" class="material-symbols-outlined block group-hover:rotate-[360deg] transition-transform duration-700">dark_mode</span>
             </button>
 
-            <a href="#"><button class="bg-primary dark:bg-blue-700 text-white px-6 py-2.5 rounded-lg font-semibold hover:ring-4 hover:ring-blue-500/30 active:scale-95">Log in</button></a>
+            <a href="http://edocumentweb.test/auth"><button class="bg-primary dark:bg-blue-700 text-white px-6 py-2.5 rounded-lg font-semibold hover:ring-4 hover:ring-blue-500/30 active:scale-95">Log in</button></a>
         </div>
 
         <div class="flex md:hidden items-center gap-3">
@@ -93,10 +93,10 @@
     </div>
 
     <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-6 py-8 space-y-6 animate-slideDown">
-        <a class="block text-lg font-medium text-slate-600 dark:text-slate-300" href="#">Beranda</a>
+        <a class="block text-lg font-medium text-slate-600 dark:text-slate-300" href="http://edocumentweb.test">Beranda</a>
         <a class="block text-lg font-bold text-secondary dark:text-green-400" href="#">Panduan</a>
         <hr class="border-slate-100 dark:border-slate-800">
-        <a href="#" class="block w-full text-center bg-primary dark:bg-blue-700 text-white py-4 rounded-xl font-bold shadow-lg">Log in</a>
+        <a href="http://edocumentweb.test/auth" class="block w-full text-center bg-primary dark:bg-blue-700 text-white py-4 rounded-xl font-bold shadow-lg">Log in</a>
     </div>
 </nav>
 
@@ -111,7 +111,7 @@
                     Selamat datang di ekosistem tanda tangan digital masa depan. Kelola dokumen secara aman, legal, dan sepenuhnya digital.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-                    <a href="#" class="group w-full sm:w-auto">
+                    <a href="https://helpdesk.balikpapan.go.id/download_attachment.php?kb_att=6" class="group w-full sm:w-auto">
                         <button class="w-full bg-primary dark:bg-blue-700 text-white px-10 py-5 rounded-2xl font-bold shadow-xl hover:shadow-primary/20 dark:hover:shadow-blue-500/20 hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-3">
                             Unduh Panduan Lengkap <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">download</span>
                         </button>
@@ -184,7 +184,7 @@
         <div class="flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
             <div>
                 <p class="font-extrabold text-primary dark:text-white mb-3 text-2xl tracking-tighter">ESign Balikpapan</p>
-                <p class="text-slate-500 text-sm max-w-sm">Inovasi pelayanan publik digital untuk warga Balikpapan yang lebih modern dan efisien.</p>
+                <p class="text-slate-500 text-sm max-w-sm">Layanan sertifikasi elektronik resmi di bawah Dinas Komunikasi dan Informatika Pemerintah Kota Balikpapan.</p>
             </div>
             <div class="flex flex-wrap justify-center gap-10 text-sm font-semibold">
                 <a class="text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors" href="#">Kebijakan Privasi</a>

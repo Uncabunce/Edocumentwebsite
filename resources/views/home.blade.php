@@ -226,9 +226,9 @@
               Mulai Verifikasi
             </button>
           </a>
-          <button class="hero-btn-ghost w-full sm:w-auto px-10 py-5 bg-white/10 text-white border border-white/20 rounded-xl font-bold backdrop-blur-sm">
+          <a href="http://edocumentweb.test/guide"><button class="hero-btn-ghost w-full sm:w-auto px-10 py-5 bg-white/10 text-white border border-white/20 rounded-xl font-bold backdrop-blur-sm">
             Cek Panduan
-          </button>
+          </button></a>
         </div>
       </div>
     </div>
@@ -313,7 +313,7 @@ Untuk warga, Anda membutuhkan KTP elektronik yang valid dan nomor ponsel aktif. 
           <h5 class="text-primary dark:text-white font-bold text-sm mb-6 uppercase tracking-widest">Bantuan</h5>
           <ul class="space-y-4">
             <li><a class="text-slate-500 dark:text-outline-variant text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#">Kontak Resmi</a></li>
-            <li><a class="text-slate-500 dark:text-outline-variant text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#">Pusat Bantuan</a></li>
+            <li><a class="text-slate-500 dark:text-outline-variant text-sm hover:text-emerald-500 underline transition-colors duration-200" href="https://helpdesk.balikpapan.go.id/">Pusat Bantuan</a></li>
             <li><a class="text-slate-500 dark:text-outline-variant text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#faq-section">FAQ</a></li>
           </ul> 
         </div>
