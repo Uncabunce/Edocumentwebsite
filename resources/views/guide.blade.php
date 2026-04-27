@@ -188,7 +188,7 @@
             </div>
             <div class="flex flex-wrap justify-center gap-10 text-sm font-semibold">
                 <a class="text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors" href="#">Kebijakan Privasi</a>
-                <a class="text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors" href="#">Bantuan</a>
+                <a class="text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors" href="https://helpdesk.balikpapan.go.id/">Bantuan</a>
                 <a class="text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors" href="#">Kontak Kami</a>
             </div>
         </div>
