@@ -128,9 +128,6 @@
         <button onclick="toggleDarkMode()" class="w-12 h-12 rounded-full bg-white dark:bg-dark-card shadow-lg flex items-center justify-center text-slate-700 dark:text-yellow-400 border border-slate-100 dark:border-white/10 transition-all hover:scale-110">
             <span id="dark-icon" class="material-symbols-outlined">dark_mode</span>
         </button>
-        <button class="w-12 h-12 rounded-full bg-white dark:bg-dark-card shadow-lg flex items-center justify-center text-primary dark:text-white border border-slate-100 dark:border-white/10 transition-all hover:scale-110">
-            <span class="material-symbols-outlined">help</span>
-        </button>
     </div>
 
     <script>
