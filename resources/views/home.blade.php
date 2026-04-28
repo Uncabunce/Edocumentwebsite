@@ -306,7 +306,7 @@ Untuk warga, Anda membutuhkan KTP elektronik yang valid dan nomor ponsel aktif. 
           <ul class="space-y-4">
             <li><a class="text-slate-500 dark:text-outline-variant text-sm hover:text-emerald-500 underline transition-colors duration-200" href="https://ppidkemkominfo.wordpress.com/wp-content/uploads/2012/11/uu-no-11-tahun-2008-tentang-ite.pdf">Undang-Undang ITE</a></li>
             <li><a class="text-slate-500 dark:text-outline-variant text-sm hover:text-emerald-500 underline transition-colors duration-200" href="https://jdih.komdigi.go.id/produk_hukum/view/id/695/t/peraturan+pemerintah+nomor+71+tahun+2019">PP Penyelenggaraan Sistem Elektronik</a></li>
-            <li><a class="text-slate-500 dark:text-outline-variant text-sm hover:text-emerald-500 underline transition-colors duration-200" href="#">Kebijakan Privasi</a></li>
+            <li><a class="text-slate-500 dark:text-outline-variant text-sm hover:text-emerald-500 underline transition-colors duration-200" href="https://www.komdigi.go.id/lainnya/kebijakan-privasi">Kebijakan Privasi</a></li>
           </ul>
         </div>
         <div>
@@ -321,7 +321,7 @@ Untuk warga, Anda membutuhkan KTP elektronik yang valid dan nomor ponsel aktif. 
     </div>
     <div class="max-w-7xl mx-auto px-8 py-6 border-t border-slate-100 dark:border-outline/10 flex flex-col sm:flex-row justify-between items-center text-slate-500 dark:text-outline-variant text-xs gap-4">
       <p>© 2026 Pemerintah Kota Balikpapan. Hak Cipta Dilindungi Undang-Undang.</p>
-      <p>Versi 2.4.0</p>
+      <p>Versi 0.9.0</p>
     </div>
   </footer>
 </main>
