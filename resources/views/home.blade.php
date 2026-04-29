@@ -202,7 +202,6 @@
         Log in
       </button></a>
     </div>
-
   </div>
 </nav>
 
