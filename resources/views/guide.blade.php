@@ -16,7 +16,7 @@
                 extend: {
                     colors: {
                         "primary": "#001e40",
-                        "secondary": "#006c4a",
+                        "secondary": "#CA8A04",
                         "surface": "#f8f9ff",
                         "on-surface": "#171c22",
                         "on-surface-variant": "#43474f",
@@ -63,7 +63,7 @@
     <div class="flex justify-between items-center px-4 md:px-8 h-20 max-w-screen-2xl mx-auto">
         <div class="flex items-center gap-3 flex-shrink-0 hover:scale-105 transition-transform cursor-pointer">
             <img src="images/bpn_logo.png" alt="Logo" class="h-10 w-auto object-contain">
-            <span class="text-lg md:text-xl font-extrabold tracking-tight text-blue-900 dark:text-blue-400">
+            <span class="text-lg md:text-xl font-extrabold tracking-tight">
                 ESign Balikpapan
             </span>
         </div>
@@ -73,7 +73,7 @@
                 Beranda
                 <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary dark:bg-blue-400 transition-all group-hover:w-full"></span>
             </a>
-            <a class="text-secondary dark:text-green-400 font-bold border-b-2 border-secondary pb-1" href="#">Panduan</a>
+            <a class="text-secondary dark:text-yellow-400 font-bold border-b-2 border-b-yellow-600 border-secondary pb-1" href="#">Panduan</a>
             
             <button onclick="toggleDarkMode()" class="group p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-primary hover:text-white transition-all duration-500">
                 <span id="dark-icon" class="material-symbols-outlined block group-hover:rotate-[360deg] transition-transform duration-700">dark_mode</span>
@@ -94,7 +94,7 @@
 
     <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-6 py-8 space-y-6 animate-slideDown">
         <a class="block text-lg font-medium text-slate-600 dark:text-slate-300" href="http://edocumentweb.test">Beranda</a>
-        <a class="block text-lg font-bold text-secondary dark:text-green-400" href="#">Panduan</a>
+        <a class="block text-lg font-bold text-secondary dark:text-yellow-400" href="#">Panduan</a>
         <hr class="border-slate-100 dark:border-slate-800">
         <a href="http://edocumentweb.test/auth" class="block w-full text-center bg-primary dark:bg-blue-700 text-white py-4 rounded-xl font-bold shadow-lg">Log in</a>
     </div>
@@ -105,7 +105,7 @@
         <section class="px-6 py-16 md:py-32 relative">
             <div class="max-w-4xl mx-auto relative z-10 text-center md:text-left opacity-0 animate-fadeInUp">
                 <h1 class="text-4xl md:text-7xl font-extrabold text-primary dark:text-white tracking-tighter leading-tight mb-8">
-                    Panduan Penggunaan <br class="hidden md:block"> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-secondary dark:from-blue-400 dark:to-green-400">ESign Balikpapan</span>
+                    Panduan Penggunaan <br class="hidden md:block"> <span>ESign Balikpapan</span>
                 </h1>
                 <p class="text-lg md:text-xl text-on-surface-variant dark:text-slate-400 leading-relaxed mb-10 max-w-2xl">
                     Selamat datang di ekosistem tanda tangan digital masa depan. Kelola dokumen secara aman, legal, dan sepenuhnya digital.
@@ -134,7 +134,7 @@
                         <div class="w-14 h-14 bg-blue-50 dark:bg-slate-700 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
                             <span class="material-symbols-outlined text-3xl text-primary dark:text-blue-400">fingerprint</span>
                         </div>
-                        <span class="text-xs font-bold text-secondary dark:text-green-400 uppercase tracking-widest">Langkah 01</span>
+                        <span class="text-xs font-bold text-secondary dark:text-yellow-400 uppercase tracking-widest">Langkah 01</span>
                         <h3 class="text-2xl font-bold text-primary dark:text-white mt-2 mb-4">Registrasi</h3>
                         <p class="text-sm text-on-surface-variant dark:text-slate-400 leading-relaxed">
                             Input NIK Anda. Sistem kami terhubung langsung dengan database kependudukan nasional.
@@ -145,7 +145,7 @@
                         <div class="w-14 h-14 bg-blue-50 dark:bg-slate-700 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
                             <span class="material-symbols-outlined text-3xl text-primary dark:text-blue-400">face</span>
                         </div>
-                        <span class="text-xs font-bold text-secondary dark:text-green-400 uppercase tracking-widest">Langkah 02</span>
+                        <span class="text-xs font-bold text-secondary dark:text-yellow-400 uppercase tracking-widest">Langkah 02</span>
                         <h3 class="text-2xl font-bold text-primary dark:text-white mt-2 mb-4">Autentikasi</h3>
                         <p class="text-sm text-on-surface-variant dark:text-slate-400 leading-relaxed">
                             Amankan sertifikat Anda dengan verifikasi wajah (Liveness Detection) yang sangat ketat.
@@ -156,7 +156,7 @@
                         <div class="w-14 h-14 bg-blue-50 dark:bg-slate-700 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
                             <span class="material-symbols-outlined text-3xl text-primary dark:text-blue-400">draw</span>
                         </div>
-                        <span class="text-xs font-bold text-secondary dark:text-green-400 uppercase tracking-widest">Langkah 03</span>
+                        <span class="text-xs font-bold text-secondary dark:text-yellow-400 uppercase tracking-widest">Langkah 03</span>
                         <h3 class="text-2xl font-bold text-primary dark:text-white mt-2 mb-4">E-Signing</h3>
                         <p class="text-sm text-on-surface-variant dark:text-slate-400 leading-relaxed">
                             Letakkan tanda tangan visual Anda pada dokumen PDF. Proses enkripsi dimulai seketika.
@@ -167,7 +167,7 @@
                         <div class="w-14 h-14 bg-blue-50 dark:bg-slate-700 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
                             <span class="material-symbols-outlined text-3xl text-primary dark:text-blue-400">verified_user</span>
                         </div>
-                        <span class="text-xs font-bold text-secondary dark:text-green-400 uppercase tracking-widest">Langkah 04</span>
+                        <span class="text-xs font-bold text-secondary dark:text-yellow-400 uppercase tracking-widest">Langkah 04</span>
                         <h3 class="text-2xl font-bold text-primary dark:text-white mt-2 mb-4">Validasi</h3>
                         <p class="text-sm text-on-surface-variant dark:text-slate-400 leading-relaxed">
                             Dapatkan dokumen tersertifikasi BSrE yang diakui secara hukum di seluruh Indonesia.
@@ -187,7 +187,7 @@
                 <p class="text-slate-500 text-sm max-w-sm">Layanan sertifikasi elektronik resmi di bawah Dinas Komunikasi dan Informatika Pemerintah Kota Balikpapan.</p>
             </div>
             <div class="flex flex-wrap justify-center gap-10 text-sm font-semibold">
-                <a class="text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors" href="#">Kebijakan Privasi</a>
+                <a class="text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors" href="https://www.komdigi.go.id/lainnya/kebijakan-privasi">Kebijakan Privasi</a>
                 <a class="text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors" href="https://helpdesk.balikpapan.go.id/">Bantuan</a>
                 <a class="text-slate-400 hover:text-primary dark:hover:text-blue-400 transition-colors" href="#">Kontak Kami</a>
             </div>

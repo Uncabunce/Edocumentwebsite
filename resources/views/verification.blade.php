@@ -25,9 +25,9 @@
             --footer-bg: #edf1f8;
             --accent: #1a56db;
             --accent-light: #e8f0fe;
-            --accent-green: #0a7c52;
-            --accent-green-bg: #d1fae5;
-            --accent-green-dark: #064e3b;
+            --accent-green: #CA8A04;
+            --accent-green-bg: #fcfcfc;
+            --accent-green-dark: #332c0e;
             --shadow-sm: 0 2px 8px rgba(15,40,80,0.07);
             --shadow-md: 0 6px 24px rgba(15,40,80,0.1);
             --nav-height: 72px;
@@ -49,8 +49,8 @@
             --footer-bg: #070e1a;
             --accent: #4d7cfe;
             --accent-light: #12213b;
-            --accent-green: #34d399;
-            --accent-green-bg: #064e3b;
+            --accent-green: #CA8A04;
+            --accent-green-bg: #fcfcfc;
             --shadow-sm: 0 2px 8px rgba(0,0,0,0.25);
             --shadow-md: 0 6px 24px rgba(0,0,0,0.35);
         }
@@ -268,7 +268,7 @@
         .result-hero::before {
             content: '';
             position: absolute; top: 0; left: 0; right: 0; height: 4px;
-            background: linear-gradient(90deg, var(--accent-green), #10b981);
+            background: linear-gradient(90deg, var(--accent-green));
         }
         .result-status-icon {
             width: 64px; height: 64px; border-radius: 50%;

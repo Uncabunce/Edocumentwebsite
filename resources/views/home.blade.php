@@ -31,7 +31,7 @@
           "on-surface-variant": "#43474f",
           "on-primary-fixed": "#001b3c",
           "surface-container-highest": "#dee3eb",
-          "secondary": "#006c4a",
+          "secondary": "#CA8A04",
           "on-primary": "#ffffff",
           "on-secondary-container": "#00714e",
           "secondary-fixed-dim": "#68dba9",
@@ -320,7 +320,7 @@ Untuk warga, Anda membutuhkan KTP elektronik yang valid dan nomor ponsel aktif. 
     </div>
     <div class="max-w-7xl mx-auto px-8 py-6 border-t border-slate-100 dark:border-outline/10 flex flex-col sm:flex-row justify-between items-center text-slate-500 dark:text-outline-variant text-xs gap-4">
       <p>© 2026 Pemerintah Kota Balikpapan. Hak Cipta Dilindungi Undang-Undang.</p>
-      <p>Versi 0.9.1</p>
+      <p>Versi 0.9.2</p>
     </div>
   </footer>
 </main>

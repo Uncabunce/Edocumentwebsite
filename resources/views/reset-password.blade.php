@@ -16,7 +16,7 @@
                 extend: {
                     colors: {
                         "primary": "#001e40",
-                        "secondary": "#006c4a",
+                        "secondary": "#CA8A04",
                         "dark-bg": "#0a0f18",
                         "dark-card": "#151b28",
                         "dark-input": "#1e2533"
@@ -95,7 +95,7 @@
                 </form>
 
                 <div class="mt-10 pt-8 border-t border-slate-100 dark:border-white/5 text-center">
-                    <a class="inline-flex items-center gap-2 text-primary dark:text-emerald-400 font-bold text-sm hover:underline group" href="http://edocumentweb.test/auth">
+                    <a class="inline-flex items-center gap-2 text-primary dark:text-yellow-400 font-bold text-sm hover:underline group" href="http://edocumentweb.test/auth">
                         <span class="material-symbols-outlined text-lg group-hover:-translate-x-1 transition-transform">arrow_back</span>
                         Kembali ke Log in
                     </a>
@@ -103,7 +103,7 @@
             </div>
 
             <p class="mt-8 text-center text-slate-500 dark:text-slate-500 text-xs md:text-sm px-4">
-                Butuh bantuan? <a class="text-secondary dark:text-emerald-500 font-bold underline decoration-secondary/30 underline-offset-4" href="#">Hubungi Admin</a>
+                Butuh bantuan? <a class="text-secondary dark:text-yellow-500 font-bold underline decoration-secondary/30 underline-offset-4" href="#">Hubungi Admin</a>
             </p>
         </div>
     </main>
@@ -116,7 +116,7 @@
             </div>
             <div class="flex flex-wrap justify-center gap-6">
                 <a class="text-xs text-slate-400 hover:text-primary dark:hover:text-white transition-colors" href="#">Pusat Bantuan</a>
-                <a class="text-xs text-slate-400 hover:text-primary dark:hover:text-white transition-colors" href="#">Privasi</a>
+                <a class="text-xs text-slate-400 hover:text-primary dark:hover:text-white transition-colors" href="https://www.komdigi.go.id/lainnya/kebijakan-privasi">Privasi</a>
             </div>
         </div>
     </footer>

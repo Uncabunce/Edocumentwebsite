@@ -15,7 +15,7 @@
             theme: {
                 extend: {
                     colors: {
-                        "secondary": "#006c4a",
+                        "secondary": "#CA8A04",
                         "on-primary": "#ffffff",
                         "surface": "#f8f9ff",
                         "background": "#f8f9ff",
@@ -77,13 +77,13 @@
         <section class="w-full md:w-1/2 p-8 md:p-16 flex flex-col justify-center bg-white dark:bg-dark-card">
             
             <div class="md:hidden mb-10 text-center">
-                <span class="text-[10px] font-bold tracking-[0.2em] text-secondary dark:text-green-400 uppercase mb-2 block">Portal Resmi</span>
+                <span class="text-[10px] font-bold tracking-[0.2em] text-secondary dark:text-yellow-400 uppercase mb-2 block">Portal Resmi</span>
                 <h2 class="text-3xl font-extrabold tracking-tighter text-primary dark:text-white">ESign Balikpapan</h2>
                 <div class="h-1.5 w-12 bg-secondary mx-auto mt-3 rounded-full"></div>
             </div>
 
             <header class="mb-10 text-center md:text-left">
-                <span class="hidden md:block text-[10px] font-bold tracking-[0.2em] text-secondary dark:text-green-400 uppercase mb-2">Masuk ke Akun</span>
+                <span class="hidden md:block text-[10px] font-bold tracking-[0.2em] text-secondary dark:text-yellow-400 uppercase mb-2">Masuk ke Akun</span>
                 <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white tracking-tight mb-2">Selamat Datang</h2>
                 <p class="text-slate-500 dark:text-slate-400 text-sm">Silakan masukkan identitas digital Anda untuk mengakses layanan.</p>
             </header>
@@ -99,7 +99,7 @@
                 <div class="space-y-2">
                     <div class="flex justify-between items-center px-1">
                         <label class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest" for="password">Kata Sandi</label>
-                        <a class="text-xs font-bold text-primary dark:text-green-400 hover:underline" href="http://edocumentweb.test/reset-password">Lupa Sandi?</a>
+                        <a class="text-xs font-bold text-primary dark:text-yellow-400 hover:underline" href="http://edocumentweb.test/reset-password">Lupa Sandi?</a>
                     </div>
                     <div class="group relative">
                         <input class="w-full px-5 py-4 bg-slate-50 dark:bg-dark-input border-2 border-transparent rounded-2xl focus:ring-4 focus:ring-primary/5 focus:bg-white dark:focus:bg-dark-input focus:border-primary dark:focus:border-secondary transition-all text-slate-900 dark:text-white placeholder:text-slate-400" id="password" placeholder="••••••••" type="password"/>
@@ -118,7 +118,7 @@
                 <p>© 2026 ESign Balikpapan — Digital Government Excellence</p>
                 <div class="mt-4 flex justify-center gap-6">
                     <a class="hover:text-primary dark:hover:text-white transition-colors" href="#">Ketentuan</a>
-                    <a class="hover:text-primary dark:hover:text-white transition-colors" href="#">Privasi</a>
+                    <a class="hover:text-primary dark:hover:text-white transition-colors" href="https://www.komdigi.go.id/lainnya/kebijakan-privasi">Privasi</a>
                 </div>
             </footer>
         </section>
