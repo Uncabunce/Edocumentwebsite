@@ -173,26 +173,43 @@
     transform: translateY(0);
   }
   /* Keyframes for the image fade-out then fade-in cycle */
-  @keyframes fadeOutIn {
-    0%, 100% { opacity: 1; }  /* Visible at the start and end of the loop */
-    50% { opacity: 0; }       /* Faded out at the midpoint */
+  @keyframes crossFade {
+    0% { opacity: 0; }
+    5% { opacity: 1; }   /* Fade in */
+    20% { opacity: 1; }  /* Stay visible */
+    25% { opacity: 0; }  /* Fade out */
+    100% { opacity: 0; } /* Stay hidden for the rest of the cycle */
   }
 
-  /* Keyframes for the image fade-in then fade-out cycle */
-  @keyframes fadeInOut {
-    0%, 100% { opacity: 0; }  /* Hidden at the start and end of the loop */
-    50% { opacity: 1; }       /* Faded in at the midpoint */
+  .hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-cover: cover;
+    opacity: 0;
+    animation: crossFade 20s linear infinite;
   }
 
-  /* Apply the animations */
-  .fade-out-in {
-    /* (name, duration, timing-function, infinite loop) */
-    animation: fadeOutIn 10s ease-in-out infinite; 
-  }
+  /* Stagger delays: (Total Time / Number of Images) */
+  .img-1 { animation-delay: 0s; }
+  .img-2 { animation-delay: 5s; }
+  .img-3 { animation-delay: 10s; }
+  .img-4 { animation-delay: 15s; }
+  /* ---------------------------- */
 
-  .fade-in-out {
-    animation: fadeInOut 10s ease-in-out infinite;
-  }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  .anim-fade-up { opacity: 0; animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+  .delay-1 { animation-delay: 0.10s; }
+  .delay-2 { animation-delay: 0.25s; }
+  .delay-3 { animation-delay: 0.40s; }
+
+  nav.scrolled { background: rgba(255,255,255,0.97) !important; box-shadow: 0 2px 16px rgba(0,30,64,0.10); }
+  .dark nav.scrolled { background: rgba(23, 28, 34, 0.95) !important; box-shadow: 0 4px 20px rgba(0,0,0,0.4); }
+
+  .hero-btn-primary:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 12px 32px rgba(202,138,4,0.35); }
+  .reveal { opacity: 0; transform: translateY(32px); transition: all 0.65s cubic-bezier(0.22,1,0.36,1); }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
 
   footer a { transition: color 0.2s ease; }
 </style>
@@ -229,13 +246,12 @@
 <main class="pt-20">
   <section class="relative overflow-hidden bg-primary py-24 lg:py-40">
     <!-- Fading Background Images Container -->
-    <div class="absolute inset-0 opacity-20">
-      <img class="fade-out-in absolute inset-0 w-full h-full object-cover" alt="Background 1" src="images/fb-img-1544930552936-5c84b5b0ab12ae4d7e24c403.jpg"/>
-      <img class="fade-in-out absolute inset-0 w-full h-full object-cover" alt="Background 2" src="images/kotabalikpapan.jpg"/>
-      <img class="fade-in-out absolute inset-0 w-full h-full object-cover" alt="Background 3" src="images/Pemkot-Balikpapan-Rencanakan-Efisiensi-Anggaran-Rp150-Miliar.jpg"/>
-      <img class="fade-out-in absolute inset-0 w-full h-full object-cover" alt="Background 4" src="images/duskbalikpapan.jpg"/>
-    </div>
-
+    <div class="absolute inset-0 opacity-25 z-0">
+      <img class="hero-img img-1" alt="BPN 1" src="images/fb-img-1544930552936-5c84b5b0ab12ae4d7e24c403.jpg"/>
+      <img class="hero-img img-2" alt="BPN 2" src="images/kotabalikpapan.jpg"/>
+      <img class="hero-img img-3" alt="BPN 3" src="images/Pemkot-Balikpapan-Rencanakan-Efisiensi-Anggaran-Rp150-Miliar.jpg"/>
+      <img class="hero-img img-4" alt="BPN 4" src="images/duskbalikpapan.jpg"/>
+    </div>
     <!-- Hero Content (now with relative position and higher z-index) -->
     <div class="max-w-7xl mx-auto px-6 relative z-20 flex flex-col items-center text-center">
       <div class="max-w-4xl">
@@ -400,7 +416,7 @@
     </div>
     <div class="max-w-7xl mx-auto px-8 py-6 border-t border-slate-100 dark:border-outline/10 flex flex-col sm:flex-row justify-between items-center text-slate-500 dark:text-outline-variant text-xs gap-4">
       <p>© 2026 Pemerintah Kota Balikpapan. Hak Cipta Dilindungi Undang-Undang.</p>
-      <p>Versi 0.9.3</p>
+      <p>Versi 0.9.4</p>
     </div>
   </footer>
 </main>
