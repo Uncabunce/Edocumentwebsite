@@ -16,7 +16,7 @@
         "colors": {
           "inverse-surface": "#2c3137",
           "on-secondary-fixed-variant": "#005137",
-          "primary": "#001e40",
+          "primary": "#00326A",
           "on-secondary-fixed": "#002114",
           "primary-fixed-dim": "#a7c8ff",
           "surface": "#f8f9ff",
@@ -172,6 +172,27 @@
     opacity: 1;
     transform: translateY(0);
   }
+  /* Keyframes for the image fade-out then fade-in cycle */
+  @keyframes fadeOutIn {
+    0%, 100% { opacity: 1; }  /* Visible at the start and end of the loop */
+    50% { opacity: 0; }       /* Faded out at the midpoint */
+  }
+
+  /* Keyframes for the image fade-in then fade-out cycle */
+  @keyframes fadeInOut {
+    0%, 100% { opacity: 0; }  /* Hidden at the start and end of the loop */
+    50% { opacity: 1; }       /* Faded in at the midpoint */
+  }
+
+  /* Apply the animations */
+  .fade-out-in {
+    /* (name, duration, timing-function, infinite loop) */
+    animation: fadeOutIn 10s ease-in-out infinite; 
+  }
+
+  .fade-in-out {
+    animation: fadeInOut 10s ease-in-out infinite;
+  }
 
   footer a { transition: color 0.2s ease; }
 </style>
@@ -207,10 +228,16 @@
 
 <main class="pt-20">
   <section class="relative overflow-hidden bg-primary py-24 lg:py-40">
-    <div class="absolute inset-0 opacity-20">
-      <img class="w-full h-full object-cover" alt="Background" src="images/fb-img-1544930552936-5c84b5b0ab12ae4d7e24c403.jpg"/>
-    </div>
-    <div class="max-w-7xl mx-auto px-6 relative z-10 flex flex-col items-center text-center">
+    <!-- Fading Background Images Container -->
+    <div class="absolute inset-0 opacity-20">
+      <img class="fade-out-in absolute inset-0 w-full h-full object-cover" alt="Background 1" src="images/fb-img-1544930552936-5c84b5b0ab12ae4d7e24c403.jpg"/>
+      <img class="fade-in-out absolute inset-0 w-full h-full object-cover" alt="Background 2" src="images/kotabalikpapan.jpg"/>
+      <img class="fade-in-out absolute inset-0 w-full h-full object-cover" alt="Background 3" src="images/Pemkot-Balikpapan-Rencanakan-Efisiensi-Anggaran-Rp150-Miliar.jpg"/>
+      <img class="fade-out-in absolute inset-0 w-full h-full object-cover" alt="Background 4" src="images/duskbalikpapan.jpg"/>
+    </div>
+
+    <!-- Hero Content (now with relative position and higher z-index) -->
+    <div class="max-w-7xl mx-auto px-6 relative z-20 flex flex-col items-center text-center">
       <div class="max-w-4xl">
         <h1 class="anim-fade-up delay-1 text-4xl sm:text-5xl lg:text-8xl font-extrabold text-white leading-tight tracking-tighter mb-8">
           Tanda tangan dengan mudah di ESign Balikpapan.

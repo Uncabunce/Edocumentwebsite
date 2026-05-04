@@ -16,11 +16,13 @@
         "colors": {
           "inverse-surface": "#2c3137",
           "on-secondary-fixed-variant": "#005137",
-          "primary": "#001e40",
+          "primary": "#243E59",
           "on-secondary-fixed": "#002114",
           "primary-fixed-dim": "#a7c8ff",
-          "surface": "#f8f9ff",
-          "surface-container-low": "#f0f4fd",
+          "surface": "#ffffff",           // Pure White
+          "background": "#fafafa",        // Very light neutral gray for contrast
+          "surface-bright": "#ffffff",    // Maximum brightness
+          "surface-container-low": "#fcfcfc",
           "surface-dim": "#d6dae3",
           "tertiary": "#002316",
           "secondary-container": "#82f5c1",
@@ -172,11 +174,32 @@
     opacity: 1;
     transform: translateY(0);
   }
+  /* Keyframes for the image fade-out then fade-in cycle */
+  @keyframes fadeOutIn {
+    0%, 100% { opacity: 1; }  /* Visible at the start and end of the loop */
+    50% { opacity: 0; }       /* Faded out at the midpoint */
+  }
+
+  /* Keyframes for the image fade-in then fade-out cycle */
+  @keyframes fadeInOut {
+    0%, 100% { opacity: 0; }  /* Hidden at the start and end of the loop */
+    50% { opacity: 1; }       /* Faded in at the midpoint */
+  }
+
+  /* Apply the animations */
+  .fade-out-in {
+    /* (name, duration, timing-function, infinite loop) */
+    animation: fadeOutIn 10s ease-in-out infinite; 
+  }
+
+  .fade-in-out {
+    animation: fadeInOut 10s ease-in-out infinite;
+  }
 
   footer a { transition: color 0.2s ease; }
 </style>
 </head>
-<body class="bg-surface text-on-surface dark:bg-inverse-surface dark:text-surface-container-lowest selection:bg-secondary-container selection:text-on-secondary-container">
+<body class="bg-surface text-on-surface dark:bg-inverse-surface dark:text-surface-container-lowest selection:bg-secondary-container">
 
 <nav id="navbar" class="fixed top-0 w-full z-50 bg-white/85 dark:bg-on-surface/90 backdrop-blur-xl shadow-sm">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex justify-between items-center gap-2">
@@ -207,10 +230,22 @@
 
 <main class="pt-20">
   <section class="relative overflow-hidden bg-primary py-24 lg:py-40">
-    <div class="absolute inset-0 opacity-20">
-      <img class="w-full h-full object-cover" alt="Background" src="images/fb-img-1544930552936-5c84b5b0ab12ae4d7e24c403.jpg"/>
-    </div>
-    <div class="max-w-7xl mx-auto px-6 relative z-10 flex flex-col items-center text-center">
+    
+    <!-- Fading Background Images Container -->
+    <div class="absolute inset-0 opacity-20">
+      <!-- First Image: Fades out and in -->
+      <img class="fade-out-in absolute inset-0 w-full h-full object-cover" alt="Background 1" src="images/fb-img-1544930552936-5c84b5b0ab12ae4d7e24c403.jpg"/>
+      <!-- Second Image: Fades in and out -->
+      <!-- Replace 'path/to/your/second/image.jpg' with your second image path -->
+      <img class="fade-in-out absolute inset-0 w-full h-full object-cover" alt="Background 2" src="images/kotabalikpapan.jpg"/>
+      <img class="fade-out-in absolute inset-0 w-full h-full object-cover" alt="Background 1" src="images/Pemkot-Balikpapan-Rencanakan-Efisiensi-Anggaran-Rp150-Miliar.jpg"/>
+      <!-- Second Image: Fades in and out -->
+      <!-- Replace 'path/to/your/second/image.jpg' with your second image path -->
+      <img class="fade-in-out absolute inset-0 w-full h-full object-cover" alt="Background 2" src="images/duskbalikpapan.jpg"/>
+    </div>
+
+    <!-- Hero Content (now with relative position and higher z-index) -->
+    <div class="max-w-7xl mx-auto px-6 relative z-20 flex flex-col items-center text-center">
       <div class="max-w-4xl">
         <h1 class="anim-fade-up delay-1 text-4xl sm:text-5xl lg:text-8xl font-extrabold text-white leading-tight tracking-tighter mb-8">
           Tanda tangan dengan mudah di ESign Balikpapan.
@@ -231,6 +266,7 @@
         </div>
       </div>
     </div>
+    <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white dark:from-inverse-surface to-transparent z-10"></div>
   </section>
 
 <section id="faq-section" class="py-24 bg-surface-container-low dark:bg-on-surface/50 relative overflow-hidden">
