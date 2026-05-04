@@ -233,60 +233,113 @@
     </div>
   </section>
 
-<section id="faq-section" class="py-24 bg-surface-container-lowest dark:bg-inverse-surface">
-<div class="max-w-3xl mx-auto px-6">
-<div class="text-center mb-16">
-<h2 class="text-3xl sm:text-4xl font-extrabold text-primary dark:text-primary-fixed-dim tracking-tight mb-4">Pertanyaan yang Sering Diajukan</h2>
-<p class="text-on-surface-variant dark:text-outline-variant text-lg">Temukan jawaban untuk hal-hal yang sering ditanyakan mengenai layanan kami.</p>
-</div>
-<div class="space-y-4">
-<details class="group bg-surface dark:bg-primary-container/20 rounded-2xl border border-outline-variant/30 overflow-hidden">
-<summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-<h3 class="text-lg font-bold text-primary dark:text-white">Apa itu ESign Balikpapan?</h3>
-<span class="material-symbols-outlined text-primary dark:text-white group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-on-surface-variant dark:text-surface-variant leading-relaxed">
-ESIGN adalah sistem tanda tangan elektronik yang memudahkan proses penandatanganan dokumen secara digital di Kota Balikpapan. Dengan ESIGN, Anda dapat menandatangani dokumen dengan mudah, aman, dan cepat tanpa perlu mencetak atau memindai dokumen.
-</div>
-</details>
-<details class="group bg-surface dark:bg-primary-container/20 rounded-2xl border border-outline-variant/30 overflow-hidden">
-<summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-<h3 class="text-lg font-bold text-primary dark:text-white">Apakah tanda tangan ini sah secara hukum?</h3>
-<span class="material-symbols-outlined text-primary dark:text-white group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-on-surface-variant dark:text-surface-variant leading-relaxed">
-Ya, sangat sah. Layanan kami telah sesuai dengan UU No. 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik (ITE) serta PP No. 71 Tahun 2019. Sertifikat elektronik yang diterbitkan memiliki kekuatan hukum yang kuat dan dapat dibuktikan integritasnya.
-</div>
-</details>
-<details class="group bg-surface dark:bg-primary-container/20 rounded-2xl border border-outline-variant/30 overflow-hidden">
-<summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-<h3 class="text-lg font-bold text-primary dark:text-white">Bagaimana cara memverifikasi dokumen?</h3>
-<span class="material-symbols-outlined text-primary dark:text-white group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-on-surface-variant dark:text-surface-variant leading-relaxed">
-Anda dapat menggunakan fitur "Verifikasi Dokumen" di portal ini dengan mengunggah file PDF yang telah ditandatangani. Sistem akan memeriksa validitas sertifikat elektronik dan memastikan bahwa isi dokumen tidak mengalami perubahan sejak ditandatangani.
-</div>
-</details>
-<details class="group bg-surface dark:bg-primary-container/20 rounded-2xl border border-outline-variant/30 overflow-hidden">
-<summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-<h3 class="text-lg font-bold text-primary dark:text-white">Apakah layanan ini gratis?</h3>
-<span class="material-symbols-outlined text-primary dark:text-white group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-on-surface-variant dark:text-surface-variant leading-relaxed">
-Layanan ESign Balikpapan disediakan secara gratis bagi aparatur sipil negara di lingkungan Pemerintah Kota Balikpapan dan masyarakat untuk kebutuhan administrasi publik tertentu sesuai dengan kebijakan pemerintah kota guna mendukung percepatan transformasi digital.
-</div>
-</details>
-<details class="group bg-surface dark:bg-primary-container/20 rounded-2xl border border-outline-variant/30 overflow-hidden">
-<summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-<h3 class="text-lg font-bold text-primary dark:text-white">Apa yang dibutuhkan untuk mendaftar?</h3>
-<span class="material-symbols-outlined text-primary dark:text-white group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-on-surface-variant dark:text-surface-variant leading-relaxed">
-Untuk warga, Anda membutuhkan KTP elektronik yang valid dan nomor ponsel aktif. Untuk ASN, pendaftaran dilakukan melalui verifikasi data kepegawaian resmi yang terintegrasi dengan sistem kepegawaian kota.
-</div>
-</details>
-</div>
-</div>
+<section id="faq-section" class="py-24 bg-surface-container-low dark:bg-on-surface/50 relative overflow-hidden">
+  <!-- Decorative Background Element -->
+  <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+  
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="flex flex-col lg:flex-row gap-16">
+      
+      <!-- Left Column: Header -->
+      <div class="lg:w-1/3">
+        <div class="sticky top-32">
+          <span class="inline-block px-4 py-1.5 mb-4 text-xs font-bold tracking-widest text-secondary uppercase bg-secondary/10 rounded-full">
+            Bantuan & Dukungan
+          </span>
+          <h2 class="text-4xl sm:text-5xl font-extrabold text-primary dark:text-primary-fixed-dim tracking-tight mb-6">
+            Punya <br class="hidden lg:block">Pertanyaan?
+          </h2>
+          <p class="text-on-surface-variant dark:text-outline-variant text-lg leading-relaxed mb-8">
+            Kami telah merangkum beberapa informasi penting untuk membantu Anda memahami layanan ESign Balikpapan lebih baik.
+          </p>
+          <div class="p-6 bg-white dark:bg-primary-container/30 rounded-2xl border border-outline-variant/30 shadow-sm">
+            <p class="text-sm font-medium text-on-surface mb-3 dark:text-white">Masih butuh bantuan?</p>
+            <a href="https://helpdesk.balikpapan.go.id/" class="text-secondary font-bold flex items-center gap-2 hover:gap-3 transition-all">
+              Hubungi Helpdesk <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Accordions in a subtle grid/stack -->
+      <div class="lg:w-2/3 space-y-4">
+        
+        <!-- Question 1 -->
+        <details class="group bg-white dark:bg-primary-container/20 rounded-2xl border border-outline-variant/20 shadow-sm transition-all duration-300 hover:border-secondary/50 open:ring-1 open:ring-secondary/30">
+          <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+            <div class="flex items-center gap-4">
+              <span class="material-symbols-outlined text-secondary bg-secondary/10 p-2 rounded-lg">info</span>
+              <h3 class="text-lg font-bold text-primary dark:text-white">Apa itu ESign Balikpapan?</h3>
+            </div>
+            <span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform duration-300">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 ml-14 text-on-surface-variant dark:text-surface-variant leading-relaxed border-t border-outline-variant/10 pt-4">
+            ESIGN adalah sistem tanda tangan elektronik yang memudahkan proses penandatanganan dokumen secara digital di Kota Balikpapan. Dengan ESIGN, Anda dapat menandatangani dokumen dengan mudah, aman, dan cepat tanpa perlu mencetak atau memindai dokumen.
+          </div>
+        </details>
+
+        <!-- Question 2 -->
+        <details class="group bg-white dark:bg-primary-container/20 rounded-2xl border border-outline-variant/20 shadow-sm transition-all duration-300 hover:border-secondary/50 open:ring-1 open:ring-secondary/30">
+          <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+            <div class="flex items-center gap-4">
+              <span class="material-symbols-outlined text-secondary bg-secondary/10 p-2 rounded-lg">gavel</span>
+              <h3 class="text-lg font-bold text-primary dark:text-white">Apakah tanda tangan ini sah secara hukum?</h3>
+            </div>
+            <span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform duration-300">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 ml-14 text-on-surface-variant dark:text-surface-variant leading-relaxed border-t border-outline-variant/10 pt-4">
+            Ya, sangat sah. Layanan kami telah sesuai dengan <span class="font-semibold text-primary dark:text-primary-fixed-dim">UU No. 11 Tahun 2008</span> tentang ITE serta <span class="font-semibold text-primary dark:text-primary-fixed-dim">PP No. 71 Tahun 2019</span>. Sertifikat elektronik memiliki kekuatan hukum yang setara dengan tanda tangan basah.
+          </div>
+        </details>
+
+        <!-- Question 3 -->
+        <details class="group bg-white dark:bg-primary-container/20 rounded-2xl border border-outline-variant/20 shadow-sm transition-all duration-300 hover:border-secondary/50 open:ring-1 open:ring-secondary/30">
+          <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+            <div class="flex items-center gap-4">
+              <span class="material-symbols-outlined text-secondary bg-secondary/10 p-2 rounded-lg">verified_user</span>
+              <h3 class="text-lg font-bold text-primary dark:text-white">Bagaimana cara memverifikasi dokumen?</h3>
+            </div>
+            <span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform duration-300">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 ml-14 text-on-surface-variant dark:text-surface-variant leading-relaxed border-t border-outline-variant/10 pt-4">
+            Anda dapat menggunakan fitur <span class="italic">"Verifikasi Dokumen"</span> di portal ini dengan mengunggah file PDF. Sistem akan memeriksa validitas sertifikat dan memastikan isi dokumen tidak berubah sejak ditandatangani.
+          </div>
+        </details>
+
+        <!-- Question 4 -->
+        <details class="group bg-white dark:bg-primary-container/20 rounded-2xl border border-outline-variant/20 shadow-sm transition-all duration-300 hover:border-secondary/50 open:ring-1 open:ring-secondary/30">
+          <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+            <div class="flex items-center gap-4">
+              <span class="material-symbols-outlined text-secondary bg-secondary/10 p-2 rounded-lg">payments</span>
+              <h3 class="text-lg font-bold text-primary dark:text-white">Apakah layanan ini gratis?</h3>
+            </div>
+            <span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform duration-300">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 ml-14 text-on-surface-variant dark:text-surface-variant leading-relaxed border-t border-outline-variant/10 pt-4">
+            Layanan ini <span class="font-bold text-emerald-600 dark:text-secondary-fixed">GRATIS</span> bagi ASN di lingkungan Pemerintah Kota Balikpapan dan masyarakat untuk kebutuhan administrasi publik tertentu sesuai kebijakan transformasi digital kota.
+          </div>
+        </details>
+
+        <!-- Question 5 -->
+        <details class="group bg-white dark:bg-primary-container/20 rounded-2xl border border-outline-variant/20 shadow-sm transition-all duration-300 hover:border-secondary/50 open:ring-1 open:ring-secondary/30">
+          <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+            <div class="flex items-center gap-4">
+              <span class="material-symbols-outlined text-secondary bg-secondary/10 p-2 rounded-lg">badge</span>
+              <h3 class="text-lg font-bold text-primary dark:text-white">Apa yang dibutuhkan untuk mendaftar?</h3>
+            </div>
+            <span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform duration-300">expand_more</span>
+          </summary>
+          <div class="px-6 pb-6 ml-14 text-on-surface-variant dark:text-surface-variant leading-relaxed border-t border-outline-variant/10 pt-4">
+            <ul class="list-disc space-y-2">
+              <li><span class="font-medium">Warga:</span> KTP-el valid dan nomor ponsel aktif.</li>
+              <li><span class="font-medium">ASN:</span> Verifikasi data kepegawaian resmi (Si-ASN/SIMPEG).</li>
+            </ul>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </div>
 </section>
 
   <footer class="reveal bg-slate-50 dark:bg-on-surface border-t border-slate-200 dark:border-outline/20 w-full mt-auto">
@@ -303,7 +356,7 @@ Untuk warga, Anda membutuhkan KTP elektronik yang valid dan nomor ponsel aktif. 
         <div>
           <h5 class="text-primary dark:text-white font-bold text-sm mb-6 uppercase tracking-widest">Legalitas</h5>
           <ul class="space-y-4">
-            <li><a class="text-slate-500 dark:text-outline-variant text-sm hover:text-emerald-500 underline transition-colors duration-200" href="https://ppidkemkominfo.wordpress.com/wp-content/uploads/2012/11/uu-no-11-tahun-2008-tentang-ite.pdf">Undang-Undang ITE</a></li>
+            <li><a class="text-slate-500 dark:text-outline-variant text-sm hover:text-emerald-500 underline transition-colors duration-200" href="https://peraturan.bpk.go.id/Details/37582/uu-no-19-tahun-2016">Undang-Undang ITE</a></li>
             <li><a class="text-slate-500 dark:text-outline-variant text-sm hover:text-emerald-500 underline transition-colors duration-200" href="https://jdih.komdigi.go.id/produk_hukum/view/id/695/t/peraturan+pemerintah+nomor+71+tahun+2019">PP Penyelenggaraan Sistem Elektronik</a></li>
             <li><a class="text-slate-500 dark:text-outline-variant text-sm hover:text-emerald-500 underline transition-colors duration-200" href="https://www.komdigi.go.id/lainnya/kebijakan-privasi">Kebijakan Privasi</a></li>
           </ul>
@@ -320,7 +373,7 @@ Untuk warga, Anda membutuhkan KTP elektronik yang valid dan nomor ponsel aktif. 
     </div>
     <div class="max-w-7xl mx-auto px-8 py-6 border-t border-slate-100 dark:border-outline/10 flex flex-col sm:flex-row justify-between items-center text-slate-500 dark:text-outline-variant text-xs gap-4">
       <p>© 2026 Pemerintah Kota Balikpapan. Hak Cipta Dilindungi Undang-Undang.</p>
-      <p>Versi 0.9.2</p>
+      <p>Versi 0.9.3</p>
     </div>
   </footer>
 </main>
