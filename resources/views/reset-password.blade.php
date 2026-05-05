@@ -6,8 +6,8 @@
     <title>Lupa Kata Sandi - ESign Balikpapan</title>
     <link rel="icon" type="png" href="{{ asset('images/bpn_logo.png') }}">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     
     <script id="tailwind-config">
         tailwind.config = {
@@ -22,14 +22,15 @@
                         "dark-input": "#1e2533"
                     },
                     fontFamily: {
-                        "display": ["Public Sans"],
-                        "body": ["Public Sans"]
+                        "display": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"]
                     }
                 }
             }
         }
     </script>
     <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background-color 0.3s ease; }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
@@ -39,7 +40,6 @@
         .dark .civic-gradient {
             background: linear-gradient(135deg, #111827 0%, #1e293b 100%);
         }
-        body { transition: background-color 0.3s ease; }
     </style>
 </head>
 
@@ -131,7 +131,6 @@
         const html = document.documentElement;
         const darkIcon = document.getElementById('dark-icon');
 
-        // Check preference
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             html.classList.add('dark');
             darkIcon.innerText = 'light_mode';

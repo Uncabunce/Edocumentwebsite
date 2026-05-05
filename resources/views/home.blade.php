@@ -6,7 +6,7 @@
 <title>Tanda Tangan Digital Balikpapan - Keamanan Identitas Digital</title>
 <link rel="icon" type="png" href="{{ asset('images/bpn_logo.png') }}">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
   tailwind.config = {
@@ -69,16 +69,16 @@
           "full": "0.75rem"
         },
         "fontFamily": {
-          "headline": ["Public Sans"],
-          "body": ["Public Sans"],
-          "label": ["Public Sans"]
+          "headline": ["Plus Jakarta Sans"],
+          "body": ["Plus Jakarta Sans"],
+          "label": ["Plus Jakarta Sans"]
         }
       },
     },
   }
 </script>
 <style>
-  body { font-family: 'Public Sans', sans-serif; transition: background-color 0.3s, color 0.3s; }
+  body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background-color 0.3s, color 0.3s; }
   .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
   }
@@ -172,13 +172,12 @@
     opacity: 1;
     transform: translateY(0);
   }
-  /* Keyframes for the image fade-out then fade-in cycle */
   @keyframes crossFade {
     0% { opacity: 0; }
-    5% { opacity: 1; }   /* Fade in */
-    20% { opacity: 1; }  /* Stay visible */
-    25% { opacity: 0; }  /* Fade out */
-    100% { opacity: 0; } /* Stay hidden for the rest of the cycle */
+    5% { opacity: 1; }
+    20% { opacity: 1; }
+    25% { opacity: 0; }
+    100% { opacity: 0; }
   }
 
   .hero-img {
@@ -191,18 +190,10 @@
     animation: crossFade 20s linear infinite;
   }
 
-  /* Stagger delays: (Total Time / Number of Images) */
   .img-1 { animation-delay: 0s; }
   .img-2 { animation-delay: 5s; }
   .img-3 { animation-delay: 10s; }
   .img-4 { animation-delay: 15s; }
-  /* ---------------------------- */
-
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-  .anim-fade-up { opacity: 0; animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
-  .delay-1 { animation-delay: 0.10s; }
-  .delay-2 { animation-delay: 0.25s; }
-  .delay-3 { animation-delay: 0.40s; }
 
   nav.scrolled { background: rgba(255,255,255,0.97) !important; box-shadow: 0 2px 16px rgba(0,30,64,0.10); }
   .dark nav.scrolled { background: rgba(23, 28, 34, 0.95) !important; box-shadow: 0 4px 20px rgba(0,0,0,0.4); }
@@ -245,15 +236,13 @@
 
 <main class="pt-20">
   <section class="relative overflow-hidden bg-primary py-24 lg:py-40">
-    <!-- Fading Background Images Container -->
-    <div class="absolute inset-0 opacity-25 z-0">
+    <div class="absolute inset-0 opacity-25 z-0">
       <img class="hero-img img-1" alt="BPN 1" src="images/fb-img-1544930552936-5c84b5b0ab12ae4d7e24c403.jpg"/>
       <img class="hero-img img-2" alt="BPN 2" src="images/kotabalikpapan.jpg"/>
       <img class="hero-img img-3" alt="BPN 3" src="images/Pemkot-Balikpapan-Rencanakan-Efisiensi-Anggaran-Rp150-Miliar.jpg"/>
       <img class="hero-img img-4" alt="BPN 4" src="images/duskbalikpapan.jpg"/>
     </div>
-    <!-- Hero Content (now with relative position and higher z-index) -->
-    <div class="max-w-7xl mx-auto px-6 relative z-20 flex flex-col items-center text-center">
+    <div class="max-w-7xl mx-auto px-6 relative z-20 flex flex-col items-center text-center">
       <div class="max-w-4xl">
         <h1 class="anim-fade-up delay-1 text-4xl sm:text-5xl lg:text-8xl font-extrabold text-white leading-tight tracking-tighter mb-8">
           Tanda tangan dengan mudah di ESign Balikpapan.
@@ -277,13 +266,11 @@
   </section>
 
 <section id="faq-section" class="py-24 bg-surface-container-low dark:bg-on-surface/50 relative overflow-hidden">
-  <!-- Decorative Background Element -->
   <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
   
   <div class="max-w-7xl mx-auto px-6 relative z-10">
     <div class="flex flex-col lg:flex-row gap-16">
       
-      <!-- Left Column: Header -->
       <div class="lg:w-1/3">
         <div class="sticky top-32">
           <span class="inline-block px-4 py-1.5 mb-4 text-xs font-bold tracking-widest text-secondary uppercase bg-secondary/10 rounded-full">
@@ -304,10 +291,8 @@
         </div>
       </div>
 
-      <!-- Right Column: Accordions in a subtle grid/stack -->
       <div class="lg:w-2/3 space-y-4">
         
-        <!-- Question 1 -->
         <details class="group bg-white dark:bg-primary-container/20 rounded-2xl border border-outline-variant/20 shadow-sm transition-all duration-300 hover:border-secondary/50 open:ring-1 open:ring-secondary/30">
           <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
             <div class="flex items-center gap-4">
@@ -321,7 +306,6 @@
           </div>
         </details>
 
-        <!-- Question 2 -->
         <details class="group bg-white dark:bg-primary-container/20 rounded-2xl border border-outline-variant/20 shadow-sm transition-all duration-300 hover:border-secondary/50 open:ring-1 open:ring-secondary/30">
           <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
             <div class="flex items-center gap-4">
@@ -335,7 +319,6 @@
           </div>
         </details>
 
-        <!-- Question 3 -->
         <details class="group bg-white dark:bg-primary-container/20 rounded-2xl border border-outline-variant/20 shadow-sm transition-all duration-300 hover:border-secondary/50 open:ring-1 open:ring-secondary/30">
           <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
             <div class="flex items-center gap-4">
@@ -349,7 +332,6 @@
           </div>
         </details>
 
-        <!-- Question 4 -->
         <details class="group bg-white dark:bg-primary-container/20 rounded-2xl border border-outline-variant/20 shadow-sm transition-all duration-300 hover:border-secondary/50 open:ring-1 open:ring-secondary/30">
           <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
             <div class="flex items-center gap-4">
@@ -363,7 +345,6 @@
           </div>
         </details>
 
-        <!-- Question 5 -->
         <details class="group bg-white dark:bg-primary-container/20 rounded-2xl border border-outline-variant/20 shadow-sm transition-all duration-300 hover:border-secondary/50 open:ring-1 open:ring-secondary/30">
           <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
             <div class="flex items-center gap-4">
@@ -416,13 +397,12 @@
     </div>
     <div class="max-w-7xl mx-auto px-8 py-6 border-t border-slate-100 dark:border-outline/10 flex flex-col sm:flex-row justify-between items-center text-slate-500 dark:text-outline-variant text-xs gap-4">
       <p>© 2026 Pemerintah Kota Balikpapan. Hak Cipta Dilindungi Undang-Undang.</p>
-      <p>Versi 0.9.4</p>
+      <p>Versi 0.9.5</p>
     </div>
   </footer>
 </main>
 
 <script>
-  // Dark Mode Logic
   const darkToggle = document.getElementById('dark-mode-toggle');
   const darkIcon = document.getElementById('dark-mode-icon');
   const htmlRoot = document.getElementById('root-html');
@@ -446,13 +426,11 @@
     }
   });
 
-  // Navbar solidifies on scroll
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 20);
   }, { passive: true });
 
-  // Scroll-reveal for footer
   const revealEls = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -466,5 +444,3 @@
 </script>
 </body>
 </html>
-
-

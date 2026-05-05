@@ -6,8 +6,8 @@
     <title>ESign Balikpapan - Panduan</title>
     <link rel="icon" type="png" href="images/bpn_logo.png">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     
     <script id="tailwind-config">
         tailwind.config = {
@@ -34,6 +34,10 @@
                     animation: {
                         fadeInUp: 'fadeInUp 0.6s ease-out forwards',
                         slideDown: 'slideDown 0.3s ease-out forwards',
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"]
                     }
                 },
             },
@@ -42,14 +46,13 @@
     <style>
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         
-        /* Transisi Global untuk Dark Mode & Hover */
         * {
             transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
             transition-duration: 300ms;
             transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        body { font-family: 'Public Sans', sans-serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
         
         .animate-delay-100 { animation-delay: 100ms; }
         .animate-delay-200 { animation-delay: 200ms; }
@@ -79,7 +82,7 @@
                 <span id="dark-icon" class="material-symbols-outlined block group-hover:rotate-[360deg] transition-transform duration-700">dark_mode</span>
             </button>
 
-            <a href="http://edocumentweb.test/auth"><button class="bg-primary dark:bg-blue-700 text-white px-6 py-2.5 rounded-lg font-semibold hover:ring-4 hover:ring-blue-500/30 active:scale-95">Log in</button></a>
+            <a href="http://edocumentweb.test/auth"><button class="bg-primary dark:bg-yellow-600 text-white px-6 py-2.5 rounded-lg font-semibold hover:ring-4 hover:ring-blue-500/30 active:scale-95">Log in</button></a>
         </div>
 
         <div class="flex md:hidden items-center gap-3">
@@ -96,7 +99,7 @@
         <a class="block text-lg font-medium text-slate-600 dark:text-slate-300" href="http://edocumentweb.test">Beranda</a>
         <a class="block text-lg font-bold text-secondary dark:text-yellow-400" href="#">Panduan</a>
         <hr class="border-slate-100 dark:border-slate-800">
-        <a href="http://edocumentweb.test/auth" class="block w-full text-center bg-primary dark:bg-blue-700 text-white py-4 rounded-xl font-bold shadow-lg">Log in</a>
+        <a href="http://edocumentweb.test/auth" class="block w-full text-center bg-primary dark:bg-yellow-600 text-white py-4 rounded-xl font-bold shadow-lg">Log in</a>
     </div>
 </nav>
 
@@ -199,7 +202,6 @@
 </footer>
 
 <script>
-    // Logic Dark Mode dengan transisi ikon yang mulus
     function toggleDarkMode() {
         const html = document.documentElement;
         const isDark = html.classList.toggle('dark');
@@ -208,7 +210,6 @@
         
         const newIcon = isDark ? 'light_mode' : 'dark_mode';
         
-        // Animasi pergantian teks ikon
         [icon, iconMobile].forEach(el => {
             el.style.opacity = '0';
             setTimeout(() => {
@@ -226,7 +227,6 @@
         document.getElementById('dark-icon-mobile').innerText = 'light_mode';
     }
 
-    // Logic Mobile Menu dengan rotasi ikon
     function toggleMobileMenu() {
         const menu = document.getElementById('mobile-menu');
         const icon = document.getElementById('menu-icon');
